@@ -14,7 +14,9 @@
 
 ## Mockup
 
-制作中
+2026-06-19 作成（制作中）
+
+![Wireframe](docs/mockup.png)
 
 ## License
 
