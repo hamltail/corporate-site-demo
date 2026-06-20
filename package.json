@@ -2,10 +2,6 @@
   "name": "corporate-site-demo",
   "version": "1.0.0",
   "description": "架空企業をテーマに制作するコーポレートサイトのデモプロジェクトです。",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -15,15 +11,10 @@
     "type": "git",
     "url": "git+https://github.com/hamltail/corporate-site-demo.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "h-waji (hamltail)",
   "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/hamltail/corporate-site-demo/issues"
-  },
-  "homepage": "https://github.com/hamltail/corporate-site-demo#readme",
-  "dependencies": {
+  "homepage": "https://github.com/hamltail/corporate-site-demo",
+  "devDependencies": {
     "vite": "^8.0.16"
   }
 }
