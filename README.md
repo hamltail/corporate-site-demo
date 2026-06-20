@@ -29,9 +29,16 @@
 ## Tech Stack
 
 - HTML
-- CSS
 - JavaScript
+- Tailwind CSS
+- Vite
 - Figma
+
+## Technical Decisions
+
+本プロジェクトでは、モダンなフロントエンド開発を行うために Tailwind CSS と Vite を採用しています。
+
+また、コーポレートサイトという比較的シンプルな構成であることから、React や Next.js などの大規模なフレームワークは採用せず、HTML・JavaScript をベースに実装しています。
 
 ## License
 
