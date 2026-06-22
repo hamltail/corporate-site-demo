@@ -80,7 +80,7 @@ TODO: Content not provided.
 
 * Frame Width: 1440px
 * First View Height: 800px
-* Content Width: 1120px
+* Content Max Width: 1120px
 * Side Margin: 160px
 * Columns: 12
 * Column Width: 64px
@@ -108,24 +108,35 @@ TODO: Content not provided.
 
 # Container Rules
 
-Desktop Frame Width:
+## Desktop Container
 
-* 1440px
+The desktop content area is based on the 1440px mockup.
 
-Desktop Content Width:
-
-* 1120px
-
-Desktop Side Margin:
-
-* 160px
-
-Important:
-
-* Content Width already excludes side margins.
-* Do not add an additional 160px padding inside the content container.
-* The 160px value represents whitespace between the viewport edge and the content container.
-* The content container should remain centered.
+Frame Width: 1440px
+Content Max Width: 1120px
+Side Margin on 1440px frame: 160px
+Columns: 12
+Column Width: 64px
+Gutter: 32px
+Important
+1120px is the maximum content width.
+Do not implement a fixed width of 1120px.
+Use a fluid container with max-width.
+The content container should remain centered.
+The 160px value represents the outer whitespace on a 1440px desktop frame.
+Do not convert the 160px side margin into container padding.
+Do not add 160px left/right padding inside the content container.
+Recommended Implementation
+.site-container {
+  width: 100%;
+  max-width: 1120px;
+  margin-left: auto;
+  margin-right: auto;
+}
+Tailwind Example
+<div class="mx-auto w-full max-w-[1120px]">
+  ...
+</div>
 
 ---
 
@@ -331,6 +342,14 @@ The following section heights are based on the desktop mockup.
 * All interactive elements should have hover states.
 * Use a shared container width of 1120px on desktop.
 
+## Container Implementation Rules
+
+* Use max-width instead of fixed width.
+* Do not use width: 1120px for the main container.
+* Do not use px-based side padding to recreate desktop margins.
+* The container must shrink naturally on smaller screens.
+* Follow the responsive grid defined in this specification.
+
 ---
 
 # Assets
@@ -376,7 +395,7 @@ Animal Corporation
 ### Desktop
 
 * Height: 80px
-* Container Width: 1120px
+* Content Max Width: 1120px
 * Navigation Gap: 32px
 * Logo aligned left
 * Navigation aligned right
@@ -394,7 +413,7 @@ Animal Corporation
 ### Desktop
 
 * Height: 800px
-* Container Width: 1120px
+* Content Max Width: 1120px
 
 ## Hero Implementation Rules
 
@@ -759,7 +778,7 @@ News
 
 ### Desktop
 
-* Content Width: 736px
+* Content Max Width: 736px
 
 ### News Item
 
@@ -836,7 +855,7 @@ Contact
 
 ### Desktop
 
-* Content Width: 736px
+* Content Max Width: 736px
 * Center Aligned
 
 ### Spacing
@@ -871,7 +890,7 @@ Animal Corporationでは、新しい仲間を募集しています。
 
 ### Desktop
 
-* Content Width: 736px
+* Content Max Width: 736px
 * Center Aligned
 
 ### Spacing
@@ -905,7 +924,7 @@ Animal Corporation
 ### Desktop
 
 * Height: 80px
-* Content Width: 1120px
+* Content Max Width: 1120px
 * Navigation Gap: 32px
 
 ---
@@ -957,3 +976,26 @@ The implementation should prioritize matching the mockup over code abstraction.
 * Focus on recreating the visual rhythm and whitespace of the mockup.
 * Do not invent missing text.
 * Do not replace Tailwind CSS with plain CSS only.
+
+---
+
+# Content Validation Rules
+
+Do not invent:
+
+* Project descriptions
+* Team member names
+* Team member profiles
+* News content
+* Contact content
+* Recruit content
+
+Only use content defined in this specification.
+
+If content is missing:
+
+TODO: Content not provided.
+
+Never replace missing content with AI-generated marketing text.
+
+---
