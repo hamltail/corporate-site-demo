@@ -14,3 +14,15 @@
     font-family: 'Noto Sans JP', sans-serif;
   }
 }
+
+@layer components {
+  .project-shadow {
+    box-shadow: 0 18px 30px rgba(15, 23, 42, 0.08);
+  }
+
+  .chip {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-[12px] font-medium;
+    color: #666666;
+    background: #F5F2EE;
+  }
+}
