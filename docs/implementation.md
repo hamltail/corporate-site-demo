@@ -27,6 +27,53 @@
 
 ---
 
+# Implementation Constraints
+
+## CSS Strategy
+
+* Use Tailwind CSS as the primary styling method.
+* Do not implement the entire layout using plain CSS only.
+* Use Tailwind utility classes whenever possible.
+* Custom CSS should be limited to:
+
+  * CSS Variables
+  * Font Definitions
+  * Shared Utility Classes
+  * Cases where Tailwind cannot reasonably express the design.
+
+## Naming Convention
+
+When custom CSS is required:
+
+* Use BEM naming convention.
+
+Examples:
+
+* .project-card
+* .project-card__thumbnail
+* .project-card__title
+* .team-card
+* .team-card__image
+
+Avoid generic class names:
+
+* .card
+* .title
+* .box
+
+## Content Rules
+
+* Do not invent content.
+* Do not generate placeholder marketing copy.
+* Use only the content defined in this specification.
+* If content is missing, leave a TODO placeholder.
+
+Example:
+
+TODO: Content not provided.
+
+---
+
 # Layout Grid
 
 ## Desktop
@@ -59,6 +106,29 @@
 
 ---
 
+# Container Rules
+
+Desktop Frame Width:
+
+* 1440px
+
+Desktop Content Width:
+
+* 1120px
+
+Desktop Side Margin:
+
+* 160px
+
+Important:
+
+* Content Width already excludes side margins.
+* Do not add an additional 160px padding inside the content container.
+* The 160px value represents whitespace between the viewport edge and the content container.
+* The content container should remain centered.
+
+---
+
 # Colors
 
 ## Base
@@ -74,7 +144,7 @@
 ## Surface
 
 * Section Background Gray: #F7F7F7
-* Section Background Footer: #F7F7F7
+* Footer Background: #F9F6F2
 
 ## Card
 
@@ -87,12 +157,49 @@
 
 ---
 
+# Section Background Rules
+
+Use the following background colors:
+
+* Header: #FFFFFF
+* Hero: #FFFFFF
+* About: #F7F7F7
+* Service: #FFFFFF
+* Projects: #F7F7F7
+* Team: #FFFFFF
+* News: #F7F7F7
+* Contact: #FFFFFF
+* Recruit: #F7F7F7
+* Footer: #F9F6F2
+
+---
+
 # Typography
 
 ## Font Family
 
 * Japanese Text: Noto Sans JP, sans-serif
 * English Heading: Barlow Condensed, sans-serif
+
+## Font Usage Rules
+
+Use Barlow Condensed for:
+
+* Logo
+* Hero Title
+* Section Title
+* Card Title
+* Team Member Name
+* News Title
+
+Use Noto Sans JP for:
+
+* Navigation
+* Japanese Labels
+* Body Text
+* Description Text
+* Buttons
+* Footer Text
 
 ## Typography Scale
 
@@ -101,23 +208,43 @@
 * Font Size: 120px
 * Font Weight: 400
 * Letter Spacing: 0.1em
+* Line Height: 1.1
 
 ### Hero Description
 
 * Font Size: 24px
 * Font Weight: 500
+* Line Height: 1.8
 
 ### Section Title
 
 * Font Size: 64px
 * Font Weight: 700
 * Letter Spacing: 0.1em
+* Line Height: 1.2
 
-### Section Subtitle
+### Section Subtitle / Japanese Label
 
 * Font Size: 24px
 * Font Weight: 700
 * Color: Accent Gold
+
+### Body Text
+
+* Font Size: 16px
+* Font Weight: 400
+* Line Height: 1.8
+
+### Body Small
+
+* Font Size: 12px
+* Font Weight: 400
+* Line Height: 1.6
+
+### Card Title
+
+* Font Size: 14px
+* Font Weight: 700
 
 ### Contact Heading
 
@@ -128,32 +255,6 @@
 
 * Font Size: 32px
 * Font Weight: 500
-
-### Body Text
-
-* Font Size: 16px
-* Font Weight: 400
-
-### Body Small
-
-* Font Size: 12px
-* Font Weight: 400
-
-### Card Title
-
-* Font Size: 14px
-* Font Weight: 700
-
-## Line Height
-
-Recommended values:
-
-* Hero Title: 1.1
-* Section Title: 1.2
-* Lead Text: 1.5
-* Body Text: 1.8
-
-Line-height may be adjusted during implementation to visually match the mockup.
 
 ---
 
@@ -183,7 +284,38 @@ Do not compress sections.
 
 Preserve visual breathing room between headings, descriptions, cards and major content blocks.
 
-Prefer larger spacing values (32px, 48px, 64px, 120px) over smaller values whenever possible.
+Prefer larger spacing values such as 32px, 48px, 64px and 120px over smaller values whenever possible.
+
+---
+
+# Section Height Rules
+
+The following section heights are based on the desktop mockup.
+
+## Desktop Section Heights
+
+* Header: 80px
+* Hero: 800px
+* About: 540px
+* Service: 560px
+* Projects: 700px
+* Team: 600px
+* News: 400px
+* Contact: 400px
+* Recruit: 380px
+* Footer: 80px
+
+## Height Rules
+
+* Use section height as a visual guideline.
+* Prefer min-height instead of fixed height.
+* Fixed height may be used for:
+
+  * Header
+  * Hero
+  * Footer
+* Content sections should rely on spacing and layout rather than strict height values.
+* Do not clip content to match a fixed height.
 
 ---
 
@@ -205,15 +337,19 @@ Prefer larger spacing values (32px, 48px, 64px, 120px) over smaller values whene
 
 ## Images
 
-Use placeholder images until final assets are available.
+Use actual project assets when available.
 
-```text
+Do not generate image URLs.
+
+Use placeholder images only when specified.
+
+Placeholder:
+
 images/dummy.png
-```
 
 ## Icons
 
-Use placeholder SVG icons until final assets are available.
+Use placeholder SVG icons until final icons are provided.
 
 ---
 
@@ -223,6 +359,10 @@ Use placeholder SVG icons until final assets are available.
 
 * Logo
 * Navigation
+
+## Logo Text
+
+Animal Corporation
 
 ## Navigation Items
 
@@ -238,6 +378,8 @@ Use placeholder SVG icons until final assets are available.
 * Height: 80px
 * Container Width: 1120px
 * Navigation Gap: 32px
+* Logo aligned left
+* Navigation aligned right
 
 ### Mobile
 
@@ -254,12 +396,15 @@ Use placeholder SVG icons until final assets are available.
 * Height: 800px
 * Container Width: 1120px
 
-### Content Position
+## Hero Implementation Rules
 
-* Content aligned left
-* Right side intentionally left blank
+* Content must be aligned to the left side of the container.
+* Do not center the Hero content horizontally.
+* The right side of the Hero section should remain intentionally empty.
+* Hero height must remain 800px.
+* Recommended content max width: 480px
 
-### Spacing
+## Spacing
 
 * Title to Description: 96px
 
@@ -273,20 +418,6 @@ Design × Technology
 
 デザインとテクノロジーで、
 より良い体験と未来を作る。
-
----
-
-# Section Spacing
-
-## Desktop
-
-* Padding Top: 120px
-* Padding Bottom: 120px
-
-## Mobile
-
-* Padding Top: 80px
-* Padding Bottom: 80px
 
 ---
 
@@ -337,10 +468,21 @@ Animal Corporationは、デザインとテクノロジーの力で、人の行�
 
 ### Items
 
-* Human Centered
-* Impactful
-* Technology Driven
-* Simple & Beautiful
+#### Human Centered
+
+人を中心に考え、共感を軸に体験を設計します。
+
+#### Impactful
+
+ビジネスに貢献し、継続的なインパクトを創出します。
+
+#### Technology Driven
+
+最新のテクノロジーを活用し、高品質な実装を行います。
+
+#### Simple & Beautiful
+
+シンプルで美しい、使いやすい体験を目指します。
 
 ---
 
@@ -380,10 +522,21 @@ Service
 
 ## Service Cards
 
-* Web Design
-* UI / UX Design
-* Front-end Development
-* Information Architecture
+### Web Design
+
+ブランドと目的に沿った、成果に繋がるWebデザインを提供します。
+
+### UI / UX Design
+
+ユーザー中心の設計で、価値ある体験を設計します。
+
+### Front-end Development
+
+パフォーマンスとメンテナンス性を重視した実装を行います。
+
+### Information Architecture
+
+情報設計を整え、使いやすい構造を作ります。
 
 ---
 
@@ -423,11 +576,13 @@ Webサイトやアプリケーションの実績をご覧ください。
 
 * 16px
 
-## Project Cards
+## Project Content Rules
 
-* Pawth
-* Animal Corporation
-* Animal Caffee
+Do not generate descriptions automatically.
+
+All project descriptions must be explicitly defined.
+
+## Project Cards
 
 Each card includes:
 
@@ -437,6 +592,67 @@ Each card includes:
 * Category
 * Tags
 * External Link Icon
+
+### Pawth
+
+Title:
+
+Pawth
+
+Description:
+
+日々の足あとを描く
+1日1投稿の小さな日記アプリ
+
+Category:
+
+企画 / デザイン / 開発
+
+Tags:
+
+* Haml
+* Tailwind CSS
+* Responsive
+
+### Animal Corporation
+
+Title:
+
+Animal Corporation
+
+Description:
+
+コーポレートサイト制作（架空プロジェクト）
+
+Category:
+
+情報設計 / デザイン / フロントエンド開発
+
+Tags:
+
+* Figma
+* HTML / CSS
+* Responsive
+
+### Animal Caffee
+
+Title:
+
+Animal Caffee
+
+Description:
+
+アニマルカフェのサイトリニューアル（架空）
+
+Category:
+
+UI / UXデザイン / コーディング / 写真・素材選定
+
+Tags:
+
+* Figma
+* HTML / CSS
+* Responsive
 
 ---
 
@@ -477,6 +693,58 @@ Team
 
 * 16px
 
+## Team Content Rules
+
+Do not generate names, titles or profile text automatically.
+
+All profile information must be explicitly defined.
+
+## Member Cards
+
+### 代表取締役社長 / CEO
+
+Name:
+
+黒森 ゴロウ
+
+Profile:
+
+力は仲間のために使う。
+それが私の信念です。
+
+### 取締役副社長 / COO
+
+Name:
+
+南 孝
+
+Profile:
+
+仲間が高く跳べるように。
+私はその助走を支えます。
+
+### 取締役 / CDO
+
+Name:
+
+白雪 ミウ
+
+Profile:
+
+美しさは思いやりから生まれる。
+心に残る体験を届けたい。
+
+### Design Technologist
+
+Name:
+
+柴田 ケン
+
+Profile:
+
+心を動かす体験を、
+テクノロジーの力で届けます。
+
 ---
 
 # News
@@ -486,14 +754,6 @@ Team
 ### Section Title
 
 News
-
-### News Items
-
-Each item includes:
-
-* Date
-* Title
-* Description
 
 ## Layout
 
@@ -505,6 +765,50 @@ Each item includes:
 
 * Padding: 24px 0
 * Border Bottom: 1px solid #CACACA
+
+## News Items
+
+### News Item 1
+
+Date:
+
+2026.07.01
+
+Title:
+
+Animal Caffee をオープンしました。
+
+Description:
+
+動物たちが集う新しいコミュニティスペースとして、Animal Caffee を公開しました。
+
+### News Item 2
+
+Date:
+
+2026.06.01
+
+Title:
+
+新メンバーが参加しました。
+
+Description:
+
+Design Technologist として柴田ケンが加わりました。
+
+### News Item 3
+
+Date:
+
+2026.04.01
+
+Title:
+
+Animal Corporation を設立しました。
+
+Description:
+
+デザインとテクノロジーで、より良い体験を届けるために設立しました。
 
 ---
 
@@ -557,7 +861,6 @@ Recruit
 ### Description
 
 強いゴリラも、跳べるカンガルーも、繊細なネコも、まっすぐな犬も。
-
 Animal Corporationでは、新しい仲間を募集しています。
 
 ### Button Text
@@ -582,15 +885,26 @@ Animal Corporationでは、新しい仲間を募集しています。
 
 ## Content
 
-* Logo
-* Navigation
-* Copyright
+### Logo
+
+Animal Corporation
+
+### Navigation
+
+* 私たちについて
+* お知らせ
+* お問い合わせ
+* 採用
+
+### Copyright
+
+© 2026 Animal Corporation
 
 ## Layout
 
 ### Desktop
 
-* Height: 120px
+* Height: 80px
 * Content Width: 1120px
 * Navigation Gap: 32px
 
@@ -600,16 +914,35 @@ Animal Corporationでは、新しい仲間を募集しています。
 
 ## Tablet
 
-* Use 8-column grid
-* Reduce spacing where necessary
-* Convert 4-column layouts to 2-column layouts
+* Use 8-column grid.
+* Reduce spacing where necessary.
+* Convert 4-column layouts to 2-column layouts.
+* Convert 3-column layouts to 2-column layouts when necessary.
 
 ## Mobile
 
-* Use 4-column grid
-* Stack all cards vertically
-* Use hamburger navigation
-* Maintain generous spacing and readability
+* Use 4-column grid.
+* Stack all cards vertically.
+* Use hamburger navigation.
+* Maintain generous spacing and readability.
+* Reduce large heading sizes appropriately.
+* Do not allow horizontal scrolling.
+
+---
+
+# AI Implementation Priority
+
+Priority Order:
+
+1. Layout Accuracy
+2. Visual Hierarchy
+3. Spacing
+4. Typography
+5. Responsive Behavior
+6. Animation
+7. Refactoring
+
+The implementation should prioritize matching the mockup over code abstraction.
 
 ---
 
@@ -622,3 +955,5 @@ Animal Corporationでは、新しい仲間を募集しています。
 * Avoid unnecessary abstraction.
 * Keep code readable and maintainable.
 * Focus on recreating the visual rhythm and whitespace of the mockup.
+* Do not invent missing text.
+* Do not replace Tailwind CSS with plain CSS only.
