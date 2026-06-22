@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-english {
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+  .font-japanese {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+}

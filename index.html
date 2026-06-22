@@ -2,18 +2,265 @@
 <html lang="ja">
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Animal Corporation</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <header></header>
+  <body class="bg-white text-black">
+    <header class="bg-white">
+      <div class="mx-auto flex max-w-[1120px] h-[80px] items-center justify-between">
+        <p class="font-english text-base tracking-[0.18em]">Animal Corporation</p>
+        <nav aria-label="Global navigation">
+          <ul class="flex items-center gap-8 text-sm font-medium text-[#666666]">
+            <li><a href="#about" class="hover:text-black">私たちについて</a></li>
+            <li><a href="#news" class="hover:text-black">お知らせ</a></li>
+            <li><a href="#contact" class="hover:text-black">お問い合わせ</a></li>
+            <li><a href="#recruit" class="hover:text-black">採用</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
 
-    <main></main>
+    <main>
+      <section class="min-h-[800px]">
+        <div class="mx-auto flex max-w-[1120px] h-full items-center">
+          <div class="max-w-[560px]">
+            <h1 id="hero-title" class="font-english text-[120px] font-normal leading-[1.1] tracking-[0.1em] text-black">
+              Design <span class="text-[#B3913B]">×</span><br />Technology
+            </h1>
+            <p class="mt-24 text-[24px] font-[500] leading-[1.6] text-[#666666]">
+              デザインとテクノロジーで、<br />より良い体験と未来を作る。
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <footer></footer>
+      <section id="about" class="bg-[#F7F7F7] py-[120px]">
+        <div class="mx-auto grid max-w-[1120px] grid-cols-[minmax(0,5fr)_minmax(0,7fr)] gap-8">
+          <div class="max-w-[560px]">
+            <div class="flex items-center gap-4">
+              <h2 id="about-title" class="font-english text-[64px] font-bold leading-[1.2] tracking-[0.1em]">About</h2>
+              <span class="font-japanese text-[24px] font-bold text-[#B3913B]">私たちについて</span>
+            </div>
+            <p class="mt-10 text-[24px] font-[500] leading-[1.6] text-black">
+              デザインとテクノロジーで、<br />より良い体験と未来を作る。
+            </p>
+            <p class="mt-10 text-[16px] leading-[1.8] text-[#666666]">
+              Animal Corporationは、デザインとテクノロジーの力で、人の行動や社会の仕組みをより良い方向へ導く体験を設計するデザインスタジオです。ユーザーの気持ちに寄り添い、ビジネスの成長につながる本質的な価値を生み出します。
+            </p>
+          </div>
+          <div>
+            <div class="grid grid-cols-2 gap-8">
+              <article class="about-card rounded-[24px] bg-white p-6">
+                <h3 class="font-english text-[14px] font-bold">Human Centered</h3>
+              </article>
+              <article class="about-card rounded-[24px] bg-white p-6">
+                <h3 class="font-english text-[14px] font-bold">Impactful</h3>
+              </article>
+              <article class="about-card rounded-[24px] bg-white p-6">
+                <h3 class="font-english text-[14px] font-bold">Technology Driven</h3>
+              </article>
+              <article class="about-card rounded-[24px] bg-white p-6">
+                <h3 class="font-english text-[14px] font-bold">Simple &amp; Beautiful</h3>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="service" class="py-[120px]">
+        <div class="mx-auto max-w-[1120px]">
+          <div class="flex items-center gap-4">
+            <h2 id="service-title" class="font-english text-[64px] font-bold leading-[1.2] tracking-[0.1em]">Service</h2>
+            <span class="font-japanese text-[24px] font-bold text-[#B3913B]">事業内容</span>
+          </div>
+          <p class="mt-10 max-w-[680px] text-[16px] leading-[1.8] text-[#666666]">
+            デザインからフロントエンド実装、情報設計まで。ユーザー体験を重視したWebサイト制作を提供しています。
+          </p>
+          <div class="mt-12 grid grid-cols-4 gap-8">
+            <article class="service-card rounded-[24px] bg-[#F9F6F2] p-6 min-h-[360px]">
+              <div class="flex h-[128px] w-[128px] items-center justify-center rounded-full bg-white">
+                <img src="images/dummy.png" alt="Web Design icon" class="h-16 w-16 object-cover" />
+              </div>
+              <h3 class="mt-8 font-english text-[18px] font-bold">Web Design</h3>
+            </article>
+            <article class="service-card rounded-[24px] bg-[#F9F6F2] p-6 min-h-[360px]">
+              <div class="flex h-[128px] w-[128px] items-center justify-center rounded-full bg-white">
+                <img src="images/dummy.png" alt="UI / UX Design icon" class="h-16 w-16 object-cover" />
+              </div>
+              <h3 class="mt-8 font-english text-[18px] font-bold">UI / UX Design</h3>
+            </article>
+            <article class="service-card rounded-[24px] bg-[#F9F6F2] p-6 min-h-[360px]">
+              <div class="flex h-[128px] w-[128px] items-center justify-center rounded-full bg-white">
+                <img src="images/dummy.png" alt="Front-end Development icon" class="h-16 w-16 object-cover" />
+              </div>
+              <h3 class="mt-8 font-english text-[18px] font-bold">Front-end Development</h3>
+            </article>
+            <article class="service-card rounded-[24px] bg-[#F9F6F2] p-6 min-h-[360px]">
+              <div class="flex h-[128px] w-[128px] items-center justify-center rounded-full bg-white">
+                <img src="images/dummy.png" alt="Information Architecture icon" class="h-16 w-16 object-cover" />
+              </div>
+              <h3 class="mt-8 font-english text-[18px] font-bold">Information Architecture</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="py-[120px]">
+        <div class="mx-auto max-w-[1120px]">
+          <div class="flex items-center gap-4">
+            <h2 id="projects-title" class="font-english text-[64px] font-bold leading-[1.2] tracking-[0.1em]">Projects</h2>
+            <span class="font-japanese text-[24px] font-bold text-[#B3913B]">制作実績</span>
+          </div>
+          <p class="mt-10 max-w-[680px] text-[16px] leading-[1.8] text-[#666666]">
+            デザインと技術を活かして制作した、<br />Webサイトやアプリケーションの実績をご覧ください。
+          </p>
+          <div class="mt-12 flex flex-wrap gap-8">
+            <article class="project-card w-[352px] rounded-[24px] bg-white shadow-sm">
+              <img src="images/dummy.png" alt="Pawth project thumbnail" class="h-[192px] w-full object-cover" />
+              <div class="p-6">
+                <h3 class="font-english text-[18px] font-bold">Pawth</h3>
+                <p class="mt-4 text-[14px] leading-[1.8] text-[#666666]">-</p>
+                <div class="mt-6 flex items-center gap-3 text-[12px] font-bold text-[#666666]">
+                  <span>App</span>
+                  <span>#iOS #Design</span>
+                  <a href="#" class="ml-auto text-[#666666] hover:text-black" aria-label="Open Pawth project">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 21H3V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card w-[352px] rounded-[24px] bg-white shadow-sm">
+              <img src="images/dummy.png" alt="Animal Corporation project thumbnail" class="h-[192px] w-full object-cover" />
+              <div class="p-6">
+                <h3 class="font-english text-[18px] font-bold">Animal Corporation</h3>
+                <p class="mt-4 text-[14px] leading-[1.8] text-[#666666]">-</p>
+                <div class="mt-6 flex items-center gap-3 text-[12px] font-bold text-[#666666]">
+                  <span>Web</span>
+                  <span>#Branding #Front-end</span>
+                  <a href="#" class="ml-auto text-[#666666] hover:text-black" aria-label="Open Animal Corporation project">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 21H3V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+            <article class="project-card w-[352px] rounded-[24px] bg-white shadow-sm">
+              <img src="images/dummy.png" alt="Animal Caffee project thumbnail" class="h-[192px] w-full object-cover" />
+              <div class="p-6">
+                <h3 class="font-english text-[18px] font-bold">Animal Caffee</h3>
+                <p class="mt-4 text-[14px] leading-[1.8] text-[#666666]">-</p>
+                <div class="mt-6 flex items-center gap-3 text-[12px] font-bold text-[#666666]">
+                  <span>Web</span>
+                  <span>#UI #CMS</span>
+                  <a href="#" class="ml-auto text-[#666666] hover:text-black" aria-label="Open Animal Caffee project">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><path d="M21 21H3V3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="py-[120px]">
+        <div class="mx-auto max-w-[1120px]">
+          <div class="flex items-center gap-4">
+            <h2 id="team-title" class="font-english text-[64px] font-bold leading-[1.2] tracking-[0.1em]">Team</h2>
+            <span class="font-japanese text-[24px] font-bold text-[#B3913B]">メンバー</span>
+          </div>
+          <p class="mt-10 max-w-[680px] text-[16px] leading-[1.8] text-[#666666]">
+            それぞれの専門性を持つアニマルメンバーをご紹介します。
+          </p>
+          <div class="mt-12 flex flex-wrap gap-8">
+            <article class="team-card w-[256px] rounded-[24px] bg-white shadow-sm">
+              <img src="images/dummy.png" alt="黒森 ゴロウ" class="h-[320px] w-full object-cover" />
+              <div class="p-6">
+                <h3 class="font-english text-[18px] font-bold">黒森 ゴロウ</h3>
+                <p class="mt-3 text-[14px] leading-[1.8] text-[#666666]">代表取締役社長・CEO</p>
+              </div>
+            </article>
+            <article class="team-card w-[256px] rounded-[24px] bg-white shadow-sm">
+              <img src="images/dummy.png" alt="南 孝" class="h-[320px] w-full object-cover" />
+              <div class="p-6">
+                <h3 class="font-english text-[18px] font-bold">南 孝</h3>
+                <p class="mt-3 text-[14px] leading-[1.8] text-[#666666]">取締役副社長・COO</p>
+              </div>
+            </article>
+            <article class="team-card w-[256px] rounded-[24px] bg-white shadow-sm">
+              <img src="images/dummy.png" alt="白雪 ミウ" class="h-[320px] w-full object-cover" />
+              <div class="p-6">
+                <h3 class="font-english text-[18px] font-bold">白雪 ミウ</h3>
+                <p class="mt-3 text-[14px] leading-[1.8] text-[#666666]">取締役・CDO</p>
+              </div>
+            </article>
+            <article class="team-card w-[256px] rounded-[24px] bg-white shadow-sm">
+              <img src="images/dummy.png" alt="柴田 ケン" class="h-[320px] w-full object-cover" />
+              <div class="p-6">
+                <h3 class="font-english text-[18px] font-bold">柴田 ケン</h3>
+                <p class="mt-3 text-[14px] leading-[1.8] text-[#666666]">Design Technologist</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="news" class="py-[120px]">
+        <div class="mx-auto max-w-[1120px]">
+          <h2 id="news-title" class="font-english text-[64px] font-bold leading-[1.2] tracking-[0.1em]">News</h2>
+          <div class="mt-12 max-w-[736px] space-y-10">
+            <article class="border-b border-[#CACACA] pb-8">
+              <time class="block text-sm text-[#666666]">2026.07.01</time>
+              <p class="mt-4 text-[18px] font-bold">Animal Caffee をオープンしました。</p>
+              <p class="mt-3 text-[16px] leading-[1.8] text-[#666666]">動物たちが集う新しいコミュニティスペースとして、Animal Caffee を公開しました。</p>
+            </article>
+            <article class="border-b border-[#CACACA] pb-8">
+              <time class="block text-sm text-[#666666]">2026.06.01</time>
+              <p class="mt-4 text-[18px] font-bold">新メンバーが参加しました。</p>
+              <p class="mt-3 text-[16px] leading-[1.8] text-[#666666]">Design Technologist として柴田ケンが加わりました。</p>
+            </article>
+            <article>
+              <time class="block text-sm text-[#666666]">2026.04.01</time>
+              <p class="mt-4 text-[18px] font-bold">Animal Corporation を設立しました。</p>
+              <p class="mt-3 text-[16px] leading-[1.8] text-[#666666]">デザインとテクノロジーで、より良い体験を届けるために設立しました。</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="py-[120px]">
+        <div class="mx-auto max-w-[1120px] text-center">
+          <h2 id="contact-title" class="font-english text-[64px] font-bold leading-[1.2] tracking-[0.1em]">Contact</h2>
+          <h3 class="mt-8 text-[32px] font-[500] leading-[1.3]">新しい体験を、一緒につくりませんか？</h3>
+          <p class="mt-6 max-w-[680px] mx-auto text-[16px] leading-[1.8] text-[#666666]">サービス開発やWeb制作、デザインに関するご相談など、お気軽にお問い合わせください。</p>
+          <a href="#" class="mt-12 inline-block rounded-full border-2 border-[#B3913B] px-10 py-4 text-[16px] font-medium text-[#B3913B] hover:bg-[#F9F6F2]">お問い合わせ</a>
+        </div>
+      </section>
+
+      <section id="recruit" class="py-[120px]">
+        <div class="mx-auto max-w-[1120px] text-center">
+          <h2 id="recruit-title" class="font-english text-[64px] font-bold leading-[1.2] tracking-[0.1em]">Recruit</h2>
+          <h3 class="mt-8 text-[32px] font-[500] leading-[1.3]">個性は、才能だ。</h3>
+          <p class="mt-6 max-w-[680px] mx-auto text-[16px] leading-[1.8] text-[#666666]">強いゴリラも、跳べるカンガルーも、繊細なネコも、まっすぐな犬も。Animal Corporationでは、新しい仲間を募集しています。</p>
+          <a href="#" class="mt-12 inline-block rounded-full border-2 border-[#B3913B] px-10 py-4 text-[16px] font-medium text-[#B3913B] hover:bg-[#F9F6F2]">エントリー</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-[#F7F7F7]">
+      <div class="mx-auto flex max-w-[1120px] h-[120px] items-center justify-between">
+        <p class="font-english text-base tracking-[0.18em]">Animal Corporation</p>
+        <nav aria-label="Footer navigation">
+          <ul class="flex items-center gap-8 text-sm text-[#666666]">
+            <li><a href="#about" class="hover:text-black">私たちについて</a></li>
+            <li><a href="#news" class="hover:text-black">お知らせ</a></li>
+            <li><a href="#contact" class="hover:text-black">お問い合わせ</a></li>
+            <li><a href="#recruit" class="hover:text-black">採用</a></li>
+          </ul>
+        </nav>
+        <p class="text-sm text-[#666666]">© 2026 Animal Corporation</p>
+      </div>
+    </footer>
   </body>
 </html>
