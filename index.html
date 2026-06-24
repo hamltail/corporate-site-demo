@@ -10,7 +10,7 @@
   </head>
   <body class="bg-white text-black">
     <header class="bg-white">
-      <div class="mx-auto flex max-w-[1120px] h-[80px] items-center justify-between">
+      <div class="mx-auto flex w-full max-w-[1120px] h-[80px] items-center justify-between px-7 md:px-11 lg:px-[8px]">
         <a href="/" class="flex items-center gap-3">
           <img
             src="images/animal-corporation-logo.png"
@@ -21,7 +21,7 @@
             Animal Corporation
           </span>
         </a>
-        <nav aria-label="Global navigation">
+        <nav aria-label="Global navigation" class="hidden md:block">
           <ul class="flex items-center gap-8 text-sm font-medium text-[#666666]">
             <li><a href="#about" class="nav-link">私たちについて</a></li>
             <li><a href="#news" class="nav-link">お知らせ</a></li>
@@ -29,25 +29,30 @@
             <li><a href="#recruit" class="nav-link">採用情報</a></li>
           </ul>
         </nav>
+        <button class="md:hidden flex flex-col gap-1.5" aria-label="Toggle menu">
+          <span class="w-6 h-0.5 bg-black"></span>
+          <span class="w-6 h-0.5 bg-black"></span>
+          <span class="w-6 h-0.5 bg-black"></span>
+        </button>
       </div>
     </header>
 
     <main>
-      <section class="h-[800px]">
-        <div class="mx-auto flex h-full max-w-[1120px] items-center px-[8px]">
-          <div class="max-w-[640px]">
+      <section class="min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center">
+        <div class="mx-auto flex w-full max-w-[1120px] h-full items-center px-7 md:px-11 lg:px-[8px]">
+          <div class="max-w-full md:max-w-[640px]">
             <h1
               id="hero-title"
-              class="font-english text-[120px] font-normal leading-[1.1] tracking-[0.1em] text-black"
+              class="font-english text-[48px] md:text-[80px] lg:text-[120px] font-normal leading-[1.1] tracking-[0.1em] text-black"
             >
-              <span class="inline-flex items-start gap-10">
+              <span class="inline-flex items-start gap-6 md:gap-8 lg:gap-10">
                 <span>Design</span>
                 <span class="text-[#B3913B]">×</span>
               </span>
               <br />
               <span>Technology</span>
             </h1>
-            <p class="mt-24 text-[24px] font-[500] leading-[1.6] text-[#666666]">
+            <p class="mt-8 md:mt-16 lg:mt-24 text-[16px] md:text-[20px] lg:text-[24px] font-[500] leading-[1.6] text-[#666666]">
               デザインとテクノロジーで、<br />より良い体験と未来を作る。
             </p>
           </div>
