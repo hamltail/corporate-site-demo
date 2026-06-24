@@ -21,7 +21,7 @@
             Animal Corporation
           </span>
         </a>
-        <nav aria-label="Global navigation" class="hidden md:block">
+        <nav aria-label="グローバルナビゲーション" class="hidden md:block">
           <ul class="flex items-center gap-8 text-sm font-medium text-[#666666]">
             <li><a href="#about" class="nav-link">私たちについて</a></li>
             <li><a href="#news" class="nav-link">お知らせ</a></li>
@@ -29,7 +29,7 @@
             <li><a href="#recruit" class="nav-link">採用情報</a></li>
           </ul>
         </nav>
-        <button id="mobile-menu-button" type="button" class="md:hidden flex flex-col gap-1.5" aria-label="メニューを開閉" aria-expanded="false">
+        <button id="mobile-menu-button" type="button" class="md:hidden flex flex-col gap-1.5" aria-label="メニューを開閉" aria-expanded="false" aria-controls="mobile-menu">
           <span class="w-6 h-0.5 bg-black"></span>
           <span class="w-6 h-0.5 bg-black"></span>
           <span class="w-6 h-0.5 bg-black"></span>
@@ -45,7 +45,7 @@
       </nav>
     </header>
 
-    <main>
+    <main id="main-content">
       <section class="min-h-[600px] md:min-h-[700px] lg:min-h-[800px] flex items-center">
         <div class="mx-auto flex w-full max-w-[1120px] h-full items-center px-7 md:px-11 lg:px-[8px]">
           <div class="max-w-full md:max-w-[640px]">
@@ -189,7 +189,7 @@
                     target="_blank"
                     rel="noopener noreferrer"
                     class="text-[#666666] hover:text-black"
-                    aria-label="Open Pawth project"
+                    aria-label="パウスのプロジェクトを開く"
                   >
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                       <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -213,7 +213,7 @@
               <div class="p-6 flex flex-col flex-1">
                 <div class="flex items-start justify-between">
                   <h3 class="font-english text-[18px] font-bold">Animal Corporation</h3>
-                  <a href="#" class="text-[#666666] hover:text-black" aria-label="Open Animal Corporation project">
+                  <a href="#" class="text-[#666666] hover:text-black" aria-label="アニマルコーポレーションのプロジェクトを開く">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                       <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -236,7 +236,7 @@
               <div class="p-6 flex flex-col flex-1">
                 <div class="flex items-start justify-between">
                   <h3 class="font-english text-[18px] font-bold">Animal Caffee</h3>
-                  <a href="#" class="text-[#666666] hover:text-black" aria-label="Open Animal Caffee project">
+                  <a href="#" class="text-[#666666] hover:text-black" aria-label="アニマルカフェのプロジェクトを開く">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                       <path d="M14 3h7v7" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                       <path d="M10 14L21 3" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -404,7 +404,7 @@
             Animal Corporation
           </span>
         </a>
-        <nav aria-label="Footer navigation">
+        <nav aria-label="フッターナビゲーション">
           <ul class="flex flex-col items-center gap-4 text-sm text-[#666666] lg:flex-row lg:gap-8">
             <li><a href="#about" class="nav-link">私たちについて</a></li>
             <li><a href="#news" class="nav-link">お知らせ</a></li>
