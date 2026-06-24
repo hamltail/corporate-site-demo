@@ -73,4 +73,16 @@
       color: white !important;
     }
   }
+
+  .team-card {
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  @media (hover: hover) {
+    .team-card:hover {
+      transform: translateY(-4px);
+    }
+  }
 }
