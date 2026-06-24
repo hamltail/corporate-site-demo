@@ -34,4 +34,23 @@
       behavior: "smooth"
     });
   });
+
+  const fadeInElements = document.querySelectorAll(".fade-in");
+
+  const fadeInObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-visible");
+        }
+      });
+    },
+    {
+      threshold: 0.15,
+    }
+  );
+
+  fadeInElements.forEach((element) => {
+    fadeInObserver.observe(element);
+  });
 })();

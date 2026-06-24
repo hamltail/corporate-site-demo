@@ -85,4 +85,17 @@
       transform: translateY(-4px);
     }
   }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
+  }
+
+  .fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
