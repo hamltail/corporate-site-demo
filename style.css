@@ -51,4 +51,26 @@
   .nav-link:focus-visible::after {
     width: 100%;
   }
+
+  .cta-button {
+    @apply relative overflow-hidden transition-colors duration-300;
+    z-index: 0;
+  }
+
+  .cta-button::before {
+    content: "";
+    @apply absolute inset-0 bg-[#B3913B] transition-transform duration-300;
+    transform: translateX(-100%);
+    z-index: -1;
+  }
+
+  @media (hover: hover) {
+    .cta-button:hover::before {
+      transform: translateX(0);
+    }
+
+    .cta-button:hover {
+      color: white !important;
+    }
+  }
 }
