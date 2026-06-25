@@ -8,7 +8,7 @@
 
 ## Demo
 
-制作中
+🌐 [デモサイトを見る](https://animal.hamltail.dev/)
 
 ## Wireframe
 
@@ -24,7 +24,7 @@
 
 ## Figma
 
-整備中
+🎨 [Figmaデザインを見る](https://www.figma.com/design/aiLzbeBUsuAQrv9Da9ldEb/ポートフォリオ?node-id=2003-267&t=vLoYEO8nfKudoHhh-1)
 
 ## Tech Stack
 
