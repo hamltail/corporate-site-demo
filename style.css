@@ -1,32 +1,105 @@
-main {
-  margin-top: 10vh;
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
 }
 
-img {
-  display: block;
-  max-width: 100%;
-  max-height: 100vh;
-  width: auto;
-  height: auto;
-  margin: 0 auto;
-  cursor: pointer;
-  transform-origin: center bottom;
-  transition:
-    transform 0.15s ease,
-    filter 0.15s ease;
+@layer utilities {
+  .font-english {
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+  .font-japanese {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
 }
 
-img:hover {
-  transform: translateY(-4px);
-  filter: drop-shadow(
-    0 12px 18px rgba(80, 110, 180, 0.18)
-  );
-}
+@layer components {
+  .project-shadow {
+    box-shadow: 0 18px 30px rgba(15, 23, 42, 0.08);
+  }
 
-img:active {
-  transform: translateY(-2px)
-    scale(1.06, 0.94);
-  filter: drop-shadow(
-    0 16px 24px rgba(80, 110, 180, 0.22)
-  );
+  .chip {
+    @apply inline-flex items-center rounded-full px-3 py-1 text-[12px] font-medium;
+    color: #666666;
+    background: #F5F2EE;
+  }
+
+  .nav-link {
+    @apply relative inline-block text-[#666666] transition-colors duration-300;
+  }
+
+  .nav-link:hover {
+    color: #000000;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute left-0 -bottom-1 h-[2px] w-0 transition-all duration-300 ease-out;
+    background-color: #B3913B;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .nav-link:focus-visible {
+    color: #000000;
+  }
+
+  .nav-link:focus-visible::after {
+    width: 100%;
+  }
+
+  .cta-button {
+    @apply relative overflow-hidden transition-colors duration-300;
+    z-index: 0;
+  }
+
+  .cta-button::before {
+    content: "";
+    @apply absolute inset-0 bg-[#B3913B] transition-transform duration-300;
+    transform: translateX(-100%);
+    z-index: -1;
+  }
+
+  @media (hover: hover) {
+    .cta-button:hover::before {
+      transform: translateX(0);
+    }
+
+    .cta-button:hover {
+      color: white !important;
+    }
+  }
+
+  .team-card {
+    transition:
+      transform 0.3s ease,
+      box-shadow 0.3s ease;
+  }
+
+  @media (hover: hover) {
+    .team-card:hover {
+      transform: translateY(-4px);
+    }
+  }
+
+  .fade-in {
+    opacity: 0;
+    transform: translateY(8px);
+    transition:
+      opacity 0.5s ease,
+      transform 0.5s ease;
+  }
+
+  .fade-in.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
