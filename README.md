@@ -12,13 +12,9 @@
 
 ## Wireframe
 
-2026-06-17 作成
-
 ![Wireframe](docs/wireframe.png)
 
 ## Mockup
-
-2026-06-19 作成（2026-06-22 更新）
 
 ![Mockup](docs/mockup.png)
 
