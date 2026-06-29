@@ -2,23 +2,17 @@
 
 架空のデザイン・テクノロジー企業「Animal Corporation」をテーマに制作した、コーポレートサイトのデモプロジェクトです。
 
-本プロジェクトでは、情報設計からワイヤーフレーム作成、FigmaによるUIデザイン、フロントエンド実装までを一貫して行いました。
+情報設計からUIデザイン、フロントエンド実装、公開までを一貫して行い、ユーザーにとって分かりやすい情報構造と、シンプルで美しいデザインを意識して制作しました。
 
-ユーザーにとって分かりやすい情報構造と、シンプルで美しいデザインを意識し、企画からデザイン、実装、公開までの制作工程をポートフォリオとしてまとめています。
+## Live Demo
 
-## Demo
-
-🌐 [デモサイトを見る](https://animal.hamltail.dev/)
-
-## Wireframe
-
-![Wireframe](docs/wireframe.png)
+🌐 [Webサイトを見る](https://animal.hamltail.dev/)
 
 ## Mockup
 
 ![Mockup](docs/mockup.png)
 
-## Figma
+## Design
 
 🎨 [Figmaデザインを見る](https://www.figma.com/design/aiLzbeBUsuAQrv9Da9ldEb/ポートフォリオ?node-id=2003-267&t=vLoYEO8nfKudoHhh-1)
 
