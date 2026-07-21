@@ -45,6 +45,32 @@
     z-index: -1;
   }
 
+  .nav-link {
+    @apply relative inline-block text-[#666666] transition-colors duration-300;
+  }
+
+  .nav-link:hover {
+    color: #000000;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute left-0 -bottom-1 h-[2px] w-0 transition-all duration-300 ease-out;
+    background-color: #b3913b;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+
+  .nav-link:focus-visible {
+    color: #000000;
+  }
+
+  .nav-link:focus-visible::after {
+    width: 100%;
+  }
+
   /* Team */
   .team-card {
     transition:
