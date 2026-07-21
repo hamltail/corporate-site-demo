@@ -20,6 +20,9 @@ export const metadata: Metadata = {
   title: "Animal Corporation",
   description:
     "デザインとテクノロジーで、より良い体験と未来を作る。",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
