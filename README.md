@@ -19,18 +19,17 @@
 ## Tech Stack
 
 - Figma
-- HTML
-- JavaScript
+- Next.js
+- React
+- TypeScript
 - Tailwind CSS
-- Vite
+- Vercel
 
 ## Technical Decisions
 
-本プロジェクトでは、コーポレートサイトの静的実装に焦点を当てています。
+当初は HTML・JavaScript・Vite を用いた静的サイトとして制作していましたが、2026年7月に Next.js へ移行しました。
 
-比較的シンプルな構成のため、HTML・JavaScriptをベースに実装し、情報設計・UIデザイン・フロントエンド実装の工程を重視しました。
-
-そのため、本作品では React や Next.js、CMS は採用していません。
+セクションごとにコンポーネントを分離することで、保守性と再利用性を意識した設計にしています。
 
 ## License
 
