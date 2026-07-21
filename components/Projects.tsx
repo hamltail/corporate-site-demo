@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Projects() {
   return (
     <section id="projects" className="py-[128px]">
@@ -23,9 +25,11 @@ export default function Projects() {
 
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <article className="project-shadow flex min-h-[436px] flex-col overflow-hidden rounded-[12px] bg-white transition-transform duration-300 hover:-translate-y-2">
-            <img
+            <Image
               src="/images/projects-pawth.png"
               alt="Pawth project thumbnail"
+              width={480}
+              height={240}
               className="h-[240px] w-full bg-white object-contain"
             />
 
@@ -90,9 +94,11 @@ export default function Projects() {
           </article>
 
           <article className="project-shadow flex min-h-[436px] flex-col overflow-hidden rounded-[12px] bg-white transition-transform duration-300 hover:-translate-y-2">
-            <img
+            <Image
               src="/images/projects-animal-corporation.png"
               alt="Animal Corporation project thumbnail"
+              width={480}
+              height={240}
               className="h-[240px] w-full bg-white object-contain"
             />
 
@@ -120,9 +126,11 @@ export default function Projects() {
           </article>
 
           <article className="project-shadow flex min-h-[436px] flex-col overflow-hidden rounded-[12px] bg-white transition-transform duration-300 hover:-translate-y-2">
-            <img
+            <Image
               src="/images/projects-animal-caffee.png"
               alt="Animal Caffee project thumbnail"
+              width={480}
+              height={240}
               className="h-[240px] w-full bg-white object-contain"
             />
 

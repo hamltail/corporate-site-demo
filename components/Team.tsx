@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Team() {
   return (
     <section id="team" className="py-[128px]">
@@ -21,9 +23,11 @@ export default function Team() {
 
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           <article className="team-card project-shadow flex flex-col overflow-hidden rounded-[16px] bg-[#F9F6F2] lg:min-h-[360px]">
-            <img
+            <Image
               src="/images/team-goro.png"
               alt="黒森 ゴロウ"
+              width={360}
+              height={360}
               className="h-[360px] w-full bg-[#F9F6F2] object-contain md:h-[300px] lg:h-[240px]"
             />
 
@@ -43,9 +47,11 @@ export default function Team() {
           </article>
 
           <article className="team-card project-shadow flex flex-col overflow-hidden rounded-[16px] bg-[#F9F6F2] lg:min-h-[360px]">
-            <img
+            <Image
               src="/images/team-ko.png"
               alt="南 考"
+              width={360}
+              height={360}
               className="h-[360px] w-full bg-[#F9F6F2] object-contain md:h-[300px] lg:h-[240px]"
             />
 
@@ -65,9 +71,11 @@ export default function Team() {
           </article>
 
           <article className="team-card project-shadow flex flex-col overflow-hidden rounded-[16px] bg-[#F9F6F2] lg:min-h-[360px]">
-            <img
+            <Image
               src="/images/team-miu.png"
               alt="白雪 ミウ"
+              width={360}
+              height={360}
               className="h-[360px] w-full bg-[#F9F6F2] object-contain md:h-[300px] lg:h-[240px]"
             />
 
@@ -87,9 +95,11 @@ export default function Team() {
           </article>
 
           <article className="team-card project-shadow flex flex-col overflow-hidden rounded-[16px] bg-[#F9F6F2] lg:min-h-[360px]">
-            <img
+            <Image
               src="/images/team-ken.png"
               alt="柴田 ケン"
+              width={360}
+              height={360}
               className="h-[360px] w-full bg-[#F9F6F2] object-contain md:h-[300px] lg:h-[240px]"
             />
 

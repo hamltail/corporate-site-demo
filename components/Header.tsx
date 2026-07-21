@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 export default function Header() {
@@ -12,17 +14,19 @@ export default function Header() {
   return (
     <header className="relative z-50 bg-white">
       <div className="mx-auto flex h-[80px] w-full max-w-[1120px] items-center justify-between px-7 md:px-11 lg:px-[8px]">
-        <a href="/" className="flex items-center gap-3">
-          <img
+        <Link href="/" className="flex items-center gap-3">
+          <Image
             src="/images/animal-corporation-logo.png"
             alt="Animal Corporation Logo"
             className="h-8 w-8 object-contain"
+            width={32}
+            height={32}
           />
 
           <span className="font-english text-base tracking-[0.18em]">
             Animal Corporation
           </span>
-        </a>
+        </Link>
 
         <nav
           aria-label="グローバルナビゲーション"

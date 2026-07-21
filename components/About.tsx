@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function About() {
   return (
     <section id="about" className="py-[128px]">
@@ -31,9 +33,11 @@ export default function About() {
         <div className="pt-0 md:pt-[150px]">
           <div className="grid grid-cols-1 gap-6 lg:grid-cols-2">
             <article className="flex h-[120px] w-full items-center gap-6 rounded-[8px] bg-white px-6">
-              <img
+              <Image
                 src="/images/about-human-centered.png"
                 alt="Human Centered icon"
+                width={48}
+                height={48}
                 className="h-12 w-12 object-cover"
               />
 
@@ -49,9 +53,11 @@ export default function About() {
             </article>
 
             <article className="flex h-[120px] w-full items-center gap-6 rounded-[8px] bg-white px-6">
-              <img
+              <Image
                 src="/images/about-impactful.png"
                 alt="Impactful icon"
+                width={48}
+                height={48}
                 className="h-12 w-12 object-cover"
               />
 
@@ -67,9 +73,11 @@ export default function About() {
             </article>
 
             <article className="flex h-[120px] w-full items-center gap-6 rounded-[8px] bg-white px-6">
-              <img
+              <Image
                 src="/images/about-technology-driven.png"
                 alt="Technology Driven icon"
+                width={48}
+                height={48}
                 className="h-12 w-12 object-cover"
               />
 
@@ -85,9 +93,11 @@ export default function About() {
             </article>
 
             <article className="flex h-[120px] w-full items-center gap-6 rounded-[8px] bg-white px-6">
-              <img
+              <Image
                 src="/images/about-simple-beautiful.png"
                 alt="Simple & Beautiful icon"
+                width={48}
+                height={48}
                 className="h-12 w-12 object-cover"
               />
 

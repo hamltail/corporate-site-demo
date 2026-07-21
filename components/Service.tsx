@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Service() {
   return (
     <section id="service" className="py-[128px]">
@@ -24,9 +26,11 @@ export default function Service() {
         <div className="mt-12 grid grid-cols-2 gap-8 lg:grid-cols-4">
           <article className="flex min-h-[320px] flex-col items-start rounded-[8px] bg-[#F9F6F2] p-6">
             <div className="mx-auto flex h-[128px] w-[128px] items-center justify-center rounded-full bg-white">
-              <img
+              <Image
                 src="/images/service-web-design.png"
                 alt="Web Design icon"
+                width={80}
+                height={80}
                 className="h-[80px] w-[80px] object-contain"
               />
             </div>
@@ -44,9 +48,11 @@ export default function Service() {
 
           <article className="flex min-h-[320px] flex-col items-start rounded-[8px] bg-[#F9F6F2] p-6">
             <div className="mx-auto flex h-[128px] w-[128px] items-center justify-center rounded-full bg-white">
-              <img
+              <Image
                 src="/images/service-uiux-design.png"
                 alt="UI / UX Design icon"
+                width={80}
+                height={80}
                 className="h-[80px] w-[80px] object-cover"
               />
             </div>
@@ -64,9 +70,11 @@ export default function Service() {
 
           <article className="flex min-h-[320px] flex-col items-start rounded-[8px] bg-[#F9F6F2] p-6">
             <div className="mx-auto flex h-[128px] w-[128px] items-center justify-center rounded-full bg-white">
-              <img
+              <Image
                 src="/images/service-frontend-development.png"
                 alt="Front-end Development icon"
+                width={80}
+                height={80}
                 className="h-[80px] w-[80px] object-cover"
               />
             </div>
@@ -84,9 +92,11 @@ export default function Service() {
 
           <article className="flex min-h-[320px] flex-col items-start rounded-[8px] bg-[#F9F6F2] p-6">
             <div className="mx-auto flex h-[128px] w-[128px] items-center justify-center rounded-full bg-white">
-              <img
+              <Image
                 src="/images/service-information-architecture.png"
                 alt="Information Architecture icon"
+                width={80}
+                height={80}
                 className="h-[80px] w-[80px] object-cover"
               />
             </div>
