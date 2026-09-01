@@ -18,18 +18,45 @@
 
 ## Tech Stack
 
-- Figma
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- Vercel
+| Category       | Technologies                             |
+| -------------- | ---------------------------------------- |
+| Design         | Figma                                    |
+| Frontend       | Next.js, React, TypeScript, Tailwind CSS |
+| Infrastructure | Docker, Vercel                           |
 
 ## Technical Decisions
 
-当初は HTML・JavaScript・Vite を用いた静的サイトとして制作していましたが、2026年7月に Next.js へ移行しました。
+当初は HTML・JavaScript・Vite を用いた静的サイトとして制作していましたが、Next.js へ移行しました。
 
 セクションごとにコンポーネントを分離することで、保守性と再利用性を意識した設計にしています。
+
+## Docker
+
+### Build
+
+```bash
+docker build -t corporate-site-demo .
+```
+
+### Start
+
+```bash
+docker run --rm --name corporate-site-demo -p 3000:3000 corporate-site-demo
+```
+
+### Check
+
+```bash
+docker ps
+```
+
+### Stop
+
+```bash
+docker stop corporate-site-demo
+```
+
+`--rm` を指定しているため、停止したコンテナは自動的に削除されます。
 
 ## License
 
