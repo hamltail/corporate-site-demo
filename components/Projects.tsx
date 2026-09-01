@@ -1,48 +1,55 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+
+import Container from "@/components/Container";
 
 export default function Projects() {
+  const t = useTranslations("Projects");
+
   return (
-    <section id="projects" className="py-[128px]">
-      <div className="mx-auto w-full max-w-[1120px] px-7 md:px-11 lg:px-[8px]">
+    <section id="projects" className="py-32">
+      <Container>
         <div className="flex flex-col gap-2 lg:flex-row lg:items-baseline lg:gap-8">
           <h2
             id="projects-title"
-            className="font-english text-[64px] font-bold leading-[1.2] tracking-[0.1em]"
+            className="font-english text-[64px] leading-[1.2] font-bold tracking-widest"
           >
             Projects
           </h2>
 
-          <span className="font-japanese text-[24px] font-bold text-[#B3913B]">
-            制作実績
+          <span className="font-japanese text-primary text-2xl font-bold">
+            {t("label")}
           </span>
         </div>
 
-        <p className="mt-10 max-w-[680px] text-[16px] leading-[1.8] text-[#666666]">
-          デザインと技術を活かして制作した
+        <p className="text-muted mt-10 max-w-170 text-base leading-[1.8]">
+          {t("introFirst")}
           <br />
-          Webサイトやアプリケーションの実績をご覧ください。
+          {t("introSecond")}
         </p>
 
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <article className="project-shadow flex min-h-[436px] flex-col overflow-hidden rounded-[12px] bg-white transition-transform duration-300 hover:-translate-y-2">
-            <Image
-              src="/images/projects-pawth.png"
-              alt="Pawth project thumbnail"
-              width={480}
-              height={240}
-              className="h-[240px] w-full bg-white object-contain"
-            />
+          <article className="project-shadow bg-surface flex min-h-109 flex-col overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-2">
+            <div className="bg-surface relative h-60 w-full">
+              <Image
+                src="/images/projects-pawth.png"
+                alt="Pawth project thumbnail"
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                className="object-contain"
+              />
+            </div>
 
             <div className="flex flex-1 flex-col p-6">
               <div className="flex items-start justify-between">
-                <h3 className="font-english text-[18px] font-bold">Pawth</h3>
+                <h3 className="font-english text-lg font-bold">Pawth</h3>
 
                 <a
                   href="https://pawth-lp.hamltail.dev/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-[#666666] hover:text-black"
-                  aria-label="パウスのプロジェクトを開く"
+                  className="text-muted hover:text-foreground transition-colors"
+                  aria-label={t("pawthOpen")}
                 >
                   <svg
                     width="20"
@@ -77,12 +84,12 @@ export default function Projects() {
                 </a>
               </div>
 
-              <p className="mt-3 min-h-[52px] text-[14px] leading-[1.8] text-[#666666]">
-                日々の足あとを描く。小さな日記アプリ
+              <p className="text-muted mt-3 min-h-13 text-sm leading-[1.8]">
+                {t("pawthDescription")}
               </p>
 
-              <div className="mt-3 text-[13px] text-[#999999]">
-                企画 / デザイン / 開発
+              <div className="text-subtle mt-3 text-[13px]">
+                {t("pawthWork")}
               </div>
 
               <div className="mt-3 flex items-center gap-3">
@@ -93,28 +100,28 @@ export default function Projects() {
             </div>
           </article>
 
-          <article className="project-shadow flex min-h-[436px] flex-col overflow-hidden rounded-[12px] bg-white transition-transform duration-300 hover:-translate-y-2">
-            <Image
-              src="/images/projects-animal-corporation.png"
-              alt="Animal Corporation project thumbnail"
-              width={480}
-              height={240}
-              className="h-[240px] w-full bg-white object-contain"
-            />
+          <article className="project-shadow bg-surface flex min-h-109 flex-col overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-2">
+            <div className="bg-surface relative h-60 w-full">
+              <Image
+                src="/images/projects-animal-corporation.png"
+                alt="Animal Corporation project thumbnail"
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                className="object-contain"
+              />
+            </div>
 
             <div className="flex flex-1 flex-col p-6">
-              <div className="flex items-start justify-between">
-                <h3 className="font-english text-[18px] font-bold">
-                  Animal Corporation
-                </h3>
-              </div>
+              <h3 className="font-english text-lg font-bold">
+                Animal Corporation
+              </h3>
 
-              <p className="mt-3 min-h-[52px] text-[14px] leading-[1.8] text-[#666666]">
-                コーポレートサイト制作（架空プロジェクト）
+              <p className="text-muted mt-3 min-h-13 text-sm leading-[1.8]">
+                {t("animalDescription")}
               </p>
 
-              <div className="mt-3 text-[13px] text-[#999999]">
-                情報設計 / デザイン / フロントエンド
+              <div className="text-subtle mt-3 text-[13px]">
+                {t("animalWork")}
               </div>
 
               <div className="mt-3 flex items-center gap-3">
@@ -125,32 +132,34 @@ export default function Projects() {
             </div>
           </article>
 
-          <article className="project-shadow flex min-h-[436px] flex-col overflow-hidden rounded-[12px] bg-white transition-transform duration-300 hover:-translate-y-2">
-            <Image
-              src="/images/projects-animal-caffee.png"
-              alt="Animal Caffee project thumbnail"
-              width={480}
-              height={240}
-              className="h-[240px] w-full bg-white object-contain"
-            />
+          <article className="project-shadow bg-surface flex min-h-109 flex-col overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-2">
+            <div className="bg-surface relative h-60 w-full">
+              <Image
+                src="/images/projects-animal-caffee.png"
+                alt="Animal Caffee project thumbnail"
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                className="object-contain"
+              />
+            </div>
 
             <div className="flex flex-1 flex-col p-6">
               <div className="flex items-start justify-between">
-                <h3 className="font-english text-[18px] font-bold">
+                <h3 className="font-english text-lg font-bold">
                   Animal Caffee
                 </h3>
 
-                <span className="rounded-[4px] bg-[#F5F2EE] px-3 py-1 text-[12px] font-medium text-[#666666]">
-                  準備中
+                <span className="bg-surface-chip text-muted rounded px-3 py-1 text-xs font-medium">
+                  {t("comingSoon")}
                 </span>
               </div>
 
-              <p className="mt-3 min-h-[52px] text-[14px] leading-[1.8] text-[#666666]">
-                アニマルカフェのサイトリニューアル（架空）
+              <p className="text-muted mt-3 min-h-13 text-sm leading-[1.8]">
+                {t("caffeeDescription")}
               </p>
 
-              <div className="mt-3 text-[13px] text-[#999999]">
-                UI UXデザイン / コーディング / 写真・素材選定
+              <div className="text-subtle mt-3 text-[13px]">
+                {t("caffeeWork")}
               </div>
 
               <div className="mt-3 flex items-center gap-3">
@@ -161,7 +170,7 @@ export default function Projects() {
             </div>
           </article>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

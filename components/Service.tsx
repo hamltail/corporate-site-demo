@@ -1,118 +1,145 @@
-import Image from "next/image";
+import { useTranslations } from "next-intl";
+
+import Container from "@/components/Container";
+
+const services = [
+  {
+    title: "Web Design",
+    messageKey: "webDesign",
+    icon: (
+      <svg
+        viewBox="0 0 64 64"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+        className="size-20"
+      >
+        <rect x="10" y="13" width="44" height="31" rx="2" />
+        <path d="M26 51h12" />
+        <path d="M29 44l-3 7" />
+        <path d="M35 44l3 7" />
+      </svg>
+    ),
+  },
+  {
+    title: "UI / UX Design",
+    messageKey: "uiUxDesign",
+    icon: (
+      <svg
+        viewBox="0 0 64 64"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+        className="size-20"
+      >
+        <rect x="21" y="7" width="22" height="50" rx="5" />
+        <path d="M29 11h6" />
+        <path d="M29 52h6" />
+      </svg>
+    ),
+  },
+  {
+    title: "Front-end Development",
+    messageKey: "frontEndDevelopment",
+    icon: (
+      <svg
+        viewBox="0 0 64 64"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+        className="size-20"
+      >
+        <path d="m23 20-12 12 12 12" />
+        <path d="m41 20 12 12-12 12" />
+        <path d="m36 13-8 38" />
+      </svg>
+    ),
+  },
+  {
+    title: "Information Architecture",
+    messageKey: "informationArchitecture",
+    icon: (
+      <svg
+        viewBox="0 0 64 64"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+        className="size-20"
+      >
+        <rect x="27" y="7" width="10" height="10" rx="1" />
+        <rect x="9" y="45" width="10" height="10" rx="1" />
+        <rect x="27" y="45" width="10" height="10" rx="1" />
+        <rect x="45" y="45" width="10" height="10" rx="1" />
+        <path d="M32 17v12" />
+        <path d="M14 29h36" />
+        <path d="M14 29v16" />
+        <path d="M32 29v16" />
+        <path d="M50 29v16" />
+      </svg>
+    ),
+  },
+] as const;
 
 export default function Service() {
+  const t = useTranslations("Service");
+
   return (
-    <section id="service" className="py-[128px]">
-      <div className="mx-auto w-full max-w-[1120px] px-7 md:px-11 lg:px-[8px]">
+    <section id="service" className="py-32">
+      <Container>
         <div className="flex flex-col gap-2 lg:flex-row lg:items-baseline lg:gap-8">
           <h2
             id="service-title"
-            className="font-english text-[64px] font-bold leading-[1.2] tracking-[0.1em]"
+            className="font-english text-[64px] leading-[1.2] font-bold tracking-widest"
           >
             Service
           </h2>
 
-          <span className="font-japanese text-[24px] font-bold text-[#B3913B]">
-            事業内容
+          <span className="font-japanese text-primary text-2xl font-bold">
+            {t("label")}
           </span>
         </div>
 
-        <p className="mt-10 max-w-[680px] text-[16px] leading-[1.8] text-[#666666]">
-          デザインからフロントエンド実装、情報設計まで。
+        <p className="text-muted mt-10 max-w-170 text-base leading-[1.8]">
+          {t("introFirst")}
           <br />
-          ユーザー体験を重視したWebサイト制作を提供しています。
+          {t("introSecond")}
         </p>
 
         <div className="mt-12 grid grid-cols-2 gap-8 lg:grid-cols-4">
-          <article className="flex min-h-[320px] flex-col items-start rounded-[8px] bg-[#F9F6F2] p-6">
-            <div className="mx-auto flex h-[128px] w-[128px] items-center justify-center rounded-full bg-white">
-              <Image
-                src="/images/service-web-design.png"
-                alt="Web Design icon"
-                width={80}
-                height={80}
-                className="h-[80px] w-[80px] object-contain"
-              />
-            </div>
+          {services.map((service) => (
+            <article
+              key={service.title}
+              className="bg-surface-soft flex min-h-80 flex-col items-start rounded-lg p-6"
+            >
+              <div className="bg-surface text-foreground mx-auto flex size-32 items-center justify-center rounded-full">
+                {service.icon}
+              </div>
 
-            <div className="mt-6 w-full">
-              <h3 className="font-english text-[18px] font-bold">
-                Web Design
-              </h3>
+              <div className="mt-6 w-full">
+                <h3 className="font-english text-lg font-bold">
+                  {service.title}
+                </h3>
 
-              <p className="mt-2 text-[14px] leading-[1.8] text-[#666666]">
-                ブランドと目的に沿った、成果に繋がるWebデザインを提供します。
-              </p>
-            </div>
-          </article>
-
-          <article className="flex min-h-[320px] flex-col items-start rounded-[8px] bg-[#F9F6F2] p-6">
-            <div className="mx-auto flex h-[128px] w-[128px] items-center justify-center rounded-full bg-white">
-              <Image
-                src="/images/service-uiux-design.png"
-                alt="UI / UX Design icon"
-                width={80}
-                height={80}
-                className="h-[80px] w-[80px] object-cover"
-              />
-            </div>
-
-            <div className="mt-6 w-full">
-              <h3 className="font-english text-[18px] font-bold">
-                UI / UX Design
-              </h3>
-
-              <p className="mt-2 text-[14px] leading-[1.8] text-[#666666]">
-                ユーザー中心の設計で、価値ある体験を設計します。
-              </p>
-            </div>
-          </article>
-
-          <article className="flex min-h-[320px] flex-col items-start rounded-[8px] bg-[#F9F6F2] p-6">
-            <div className="mx-auto flex h-[128px] w-[128px] items-center justify-center rounded-full bg-white">
-              <Image
-                src="/images/service-frontend-development.png"
-                alt="Front-end Development icon"
-                width={80}
-                height={80}
-                className="h-[80px] w-[80px] object-cover"
-              />
-            </div>
-
-            <div className="mt-6 w-full">
-              <h3 className="font-english text-[18px] font-bold">
-                Front-end Development
-              </h3>
-
-              <p className="mt-2 text-[14px] leading-[1.8] text-[#666666]">
-                パフォーマンスとメンテナンス性を重視した実装を行います。
-              </p>
-            </div>
-          </article>
-
-          <article className="flex min-h-[320px] flex-col items-start rounded-[8px] bg-[#F9F6F2] p-6">
-            <div className="mx-auto flex h-[128px] w-[128px] items-center justify-center rounded-full bg-white">
-              <Image
-                src="/images/service-information-architecture.png"
-                alt="Information Architecture icon"
-                width={80}
-                height={80}
-                className="h-[80px] w-[80px] object-cover"
-              />
-            </div>
-
-            <div className="mt-6 w-full">
-              <h3 className="font-english text-[18px] font-bold">
-                Information Architecture
-              </h3>
-
-              <p className="mt-2 text-[14px] leading-[1.8] text-[#666666]">
-                情報設計を整え、使いやすい構造を作ります。
-              </p>
-            </div>
-          </article>
+                <p className="text-muted mt-2 text-sm leading-[1.8]">
+                  {t(service.messageKey)}
+                </p>
+              </div>
+            </article>
+          ))}
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

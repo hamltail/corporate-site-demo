@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, useEffect, useRef, useState } from "react";
+import { type ReactNode, useEffect, useRef, useState } from "react";
 
 type FadeInProps = {
   children: ReactNode;
@@ -20,7 +20,7 @@ export default function FadeIn({ children }: FadeInProps) {
       },
       {
         threshold: 0.15,
-      }
+      },
     );
 
     if (ref.current) {
@@ -33,7 +33,9 @@ export default function FadeIn({ children }: FadeInProps) {
   return (
     <div
       ref={ref}
-      className={`fade-in ${isVisible ? "is-visible" : ""}`}
+      className={`transition-[opacity,transform] duration-500 ease-out ${
+        isVisible ? "translate-y-0 opacity-100" : "translate-y-2 opacity-0"
+      }`}
     >
       {children}
     </div>

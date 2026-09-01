@@ -1,0 +1,121 @@
+{
+  "Metadata": {
+    "description": "デザインとテクノロジーで、より良い体験と未来を作る。"
+  },
+  "Header": {
+    "globalNavigation": "グローバルナビゲーション",
+    "toggleMenu": "メニューを開閉",
+    "mobileNavigation": "モバイルナビゲーション",
+    "about": "私たちについて",
+    "news": "お知らせ",
+    "contact": "お問い合わせ",
+    "recruit": "採用情報"
+  },
+  "Hero": {
+    "leadFirst": "デザインとテクノロジーで、",
+    "leadSecond": "より良い体験と未来を作る。"
+  },
+  "About": {
+    "label": "私たちについて",
+    "leadFirst": "デザインとテクノロジーで、",
+    "leadSecond": "より良い体験と未来を作る。",
+    "description": "Animal Corporationは、デザインとテクノロジーの力で、人の行動や社会の仕組みをより良い方向へ導く体験を設計するデザインスタジオです。ユーザーの気持ちに寄り添い、ビジネスの成長につながる本質的な価値を生み出します。",
+    "humanCentered": "人を中心に考え、共感を軸に体験を設計します。",
+    "impactful": "ビジネスと社会に、継続的なインパクトを生み出します。",
+    "technologyDriven": "最新のテクノロジーを活用し、最適な解決策を実現します。",
+    "simpleBeautiful": "シンプルで美しく、使いやすい体験を追求します。"
+  },
+  "Service": {
+    "label": "事業内容",
+    "introFirst": "デザインからフロントエンド実装、情報設計まで。",
+    "introSecond": "ユーザー体験を重視したWebサイト制作を提供しています。",
+    "webDesign": "ブランドと目的に沿った、成果に繋がるWebデザインを提供します。",
+    "uiUxDesign": "ユーザー中心の設計で、価値ある体験を設計します。",
+    "frontEndDevelopment": "パフォーマンスとメンテナンス性を重視した実装を行います。",
+    "informationArchitecture": "情報設計を整え、使いやすい構造を作ります。"
+  },
+  "Projects": {
+    "label": "制作実績",
+    "introFirst": "デザインと技術を活かして制作した",
+    "introSecond": "Webサイトやアプリケーションの実績をご覧ください。",
+    "pawthOpen": "パウスのプロジェクトを開く",
+    "pawthDescription": "日々の足あとを描く。小さな日記アプリ",
+    "pawthWork": "企画 / デザイン / 開発",
+    "animalDescription": "コーポレートサイト制作（架空プロジェクト）",
+    "animalWork": "情報設計 / デザイン / フロントエンド",
+    "comingSoon": "準備中",
+    "caffeeDescription": "アニマルカフェのサイトリニューアル（架空）",
+    "caffeeWork": "UI UXデザイン / コーディング / 写真・素材選定"
+  },
+  "Team": {
+    "label": "メンバー",
+    "intro": "それぞれの専門性を持つアニマルメンバーをご紹介します。",
+    "goro": {
+      "name": "黒森 ゴロウ",
+      "role": "代表取締役社長 / CEO",
+      "message": "力は仲間のために使う。それが私の信念です。"
+    },
+    "ko": {
+      "name": "南 考",
+      "role": "取締役副社長 / COO",
+      "message": "仲間が高く跳べるように。私はその助走を支えます。"
+    },
+    "miu": {
+      "name": "白雪 ミウ",
+      "role": "取締役 / CDO",
+      "message": "美しさは思いやりから生まれる。心に残る体験を届けたい。"
+    },
+    "ken": {
+      "name": "柴田 ケン",
+      "role": "Design Technologist",
+      "message": "心を動かす体験を、テクノロジーの力で届けます。"
+    }
+  },
+  "News": {
+    "label": "お知らせ",
+    "caffee": {
+      "title": "Animal Caffee をオープンしました。",
+      "description": "動物たちが集う新しいコミュニティスペースとして、Animal Caffee を公開しました。"
+    },
+    "member": {
+      "title": "新メンバーが参加しました。",
+      "description": "Design Technologist として柴田ケンが加わりました。"
+    },
+    "company": {
+      "title": "Animal Corporation を設立しました。",
+      "description": "デザインとテクノロジーで、より良い体験を届けるために設立しました。"
+    }
+  },
+  "Contact": {
+    "label": "お問い合わせ",
+    "title": "新しい体験を、一緒につくりませんか？",
+    "description": "サービス開発やWeb制作、デザインに関するご相談など、 お気軽にお問い合わせください。",
+    "mailLabel": "メールでお問い合わせ",
+    "button": "お問い合わせ"
+  },
+  "Recruit": {
+    "label": "採用情報",
+    "title": "個性は、才能だ。",
+    "gorilla": "強いゴリラも",
+    "kangaroo": "跳べるカンガルーも",
+    "cat": "繊細なネコも",
+    "dog": "まっすぐな犬も",
+    "description": "Animal Corporationでは、新しい仲間を募集しています。",
+    "mailLabel": "採用エントリーのメールを送る",
+    "button": "エントリー"
+  },
+  "Footer": {
+    "navigation": "フッターナビゲーション",
+    "about": "私たちについて",
+    "news": "お知らせ",
+    "contact": "お問い合わせ"
+  },
+  "ThemeSwitcher": {
+    "light": "ライトテーマ",
+    "dark": "ダークテーマ",
+    "system": "システムテーマ"
+  },
+  "BackToTop": {
+    "label": "トップへ戻る"
+  }
+}

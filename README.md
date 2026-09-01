@@ -4,6 +4,8 @@
 
 情報設計からUIデザイン、フロントエンド実装、公開までを一貫して行い、ユーザーにとって分かりやすい情報構造と、シンプルで美しいデザインを意識して制作しました。
 
+また、Web開発における技術検証にも取り組んでいます。
+
 ## Live Demo
 
 🌐 [Webサイトを見る](https://animal.hamltail.dev/)
@@ -18,18 +20,47 @@
 
 ## Tech Stack
 
-- Figma
-- Next.js
-- React
-- TypeScript
-- Tailwind CSS
-- Vercel
+| Category       | Technologies                                             |
+| -------------- | -------------------------------------------------------- |
+| Design         | Figma                                                    |
+| Frontend       | Next.js, React, TypeScript, Tailwind CSS, next-intl      |
+| Testing        | Playwright, axe-core, Lighthouse CI, k6, Vitest, Stryker |
+| Security       | OWASP ZAP, CodeQL                                        |
+| Infrastructure | Docker, Vercel, GitHub Actions                           |
 
 ## Technical Decisions
 
-当初は HTML・JavaScript・Vite を用いた静的サイトとして制作していましたが、2026年7月に Next.js へ移行しました。
+当初は HTML・JavaScript・Vite を用いた静的サイトとして制作していましたが、Next.js へ移行しました。
 
 セクションごとにコンポーネントを分離することで、保守性と再利用性を意識した設計にしています。
+
+## Docker
+
+### Build
+
+```bash
+docker build -t corporate-site-demo .
+```
+
+### Start
+
+```bash
+docker run --rm --name corporate-site-demo -p 3000:3000 corporate-site-demo
+```
+
+### Check
+
+```bash
+docker ps
+```
+
+### Stop
+
+```bash
+docker stop corporate-site-demo
+```
+
+`--rm` を指定しているため、停止したコンテナは自動的に削除されます。
 
 ## License
 

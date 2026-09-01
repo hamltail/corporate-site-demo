@@ -1,5 +1,60 @@
 @import "tailwindcss";
 
+:root {
+  color-scheme: light;
+
+  --background: #ffffff;
+  --foreground: #000000;
+
+  --surface: #ffffff;
+  --surface-soft: #f9f6f2;
+  --surface-chip: #f5f2ee;
+
+  --border: #cacaca;
+  --muted: #666666;
+  --subtle: #999999;
+
+  --primary: #b3913b;
+  --primary-hover: #9a7a2a;
+  --primary-foreground: #ffffff;
+}
+
+.dark {
+  color-scheme: dark;
+
+  --background: #151411;
+  --foreground: #f5f3ee;
+
+  --surface: #1d1b17;
+  --surface-soft: #24211b;
+  --surface-chip: #2d2921;
+
+  --border: #4a4438;
+  --muted: #c4beb2;
+  --subtle: #938b7d;
+
+  --primary: #d2b45d;
+  --primary-hover: #e0c873;
+  --primary-foreground: #151411;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-surface: var(--surface);
+  --color-surface-soft: var(--surface-soft);
+  --color-surface-chip: var(--surface-chip);
+
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-subtle: var(--subtle);
+
+  --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
+  --color-primary-foreground: var(--primary-foreground);
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -7,6 +62,8 @@
 
   body {
     margin: 0;
+    background-color: var(--background);
+    color: var(--foreground);
     font-family: var(--font-noto-sans-jp), sans-serif;
   }
 }
@@ -22,83 +79,56 @@
 }
 
 @layer components {
-  /* 共通UI */
   .project-shadow {
     box-shadow: 0 18px 30px rgba(15, 23, 42, 0.08);
   }
 
   .chip {
-    @apply inline-flex items-center rounded-full px-3 py-1 text-[12px] font-medium;
-    color: #666666;
-    background-color: #f5f2ee;
+    @apply bg-surface-chip text-muted inline-flex items-center rounded-full px-3 py-1 text-xs font-medium;
   }
 
   .cta-button {
-    @apply relative overflow-hidden transition-colors duration-300;
-    z-index: 0;
+    @apply relative z-0 overflow-hidden transition-colors duration-300;
   }
 
   .cta-button::before {
     content: "";
-    @apply absolute inset-0 bg-[#B3913B] transition-transform duration-300;
+    @apply bg-primary absolute inset-0 -z-10 transition-transform duration-300;
     transform: translateX(-100%);
-    z-index: -1;
-  }
-
-  .fade-in {
-    opacity: 0;
-    transform: translateY(8px);
-    transition:
-      opacity 0.5s ease,
-      transform 0.5s ease;
-  }
-
-  .fade-in.is-visible {
-    opacity: 1;
-    transform: translateY(0);
   }
 
   .nav-link {
-    @apply relative inline-block text-[#666666] transition-colors duration-300;
+    @apply text-muted relative inline-block transition-colors duration-300;
   }
 
-  .nav-link:hover {
-    color: #000000;
+  .nav-link:hover,
+  .nav-link:focus-visible {
+    @apply text-foreground;
   }
 
   .nav-link::after {
     content: "";
-    @apply absolute left-0 -bottom-1 h-[2px] w-0 transition-all duration-300 ease-out;
-    background-color: #b3913b;
+    @apply bg-primary absolute -bottom-1 left-0 h-0.5 w-0 transition-all duration-300 ease-out;
   }
 
-  .nav-link:hover::after {
-    width: 100%;
-  }
-
-  .nav-link:focus-visible {
-    color: #000000;
-  }
-
+  .nav-link:hover::after,
   .nav-link:focus-visible::after {
     width: 100%;
   }
 
-  /* Team */
   .team-card {
     transition:
       transform 0.3s ease,
       box-shadow 0.3s ease;
   }
 
-  /* Hover */
   @media (hover: hover) {
     .cta-button:hover::before {
       transform: translateX(0);
     }
 
     .cta-button:hover {
-      color: white !important;
+      color: var(--primary-foreground) !important;
     }
 
     .team-card:hover {

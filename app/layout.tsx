@@ -1,5 +1,13 @@
 import type { Metadata } from "next";
 import { Barlow_Condensed, Noto_Sans_JP } from "next/font/google";
+import { NextIntlClientProvider } from "next-intl";
+import { getLocale, getMessages, getTranslations } from "next-intl/server";
+
+import BackToTop from "@/components/BackToTop";
+import Footer from "@/components/Footer";
+import Header from "@/components/Header";
+import ThemeProvider from "@/components/ThemeProvider";
+
 import "./globals.css";
 
 const barlowCondensed = Barlow_Condensed({
@@ -16,26 +24,45 @@ const notoSansJP = Noto_Sans_JP({
   display: "swap",
 });
 
-export const metadata: Metadata = {
-  title: "Animal Corporation",
-  description:
-    "デザインとテクノロジーで、より良い体験と未来を作る。",
-  icons: {
-    icon: "/favicon.png",
-  },
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("Metadata");
 
-export default function RootLayout({
+  return {
+    title: "Animal Corporation",
+    description: t("description"),
+    icons: {
+      icon: "/favicon.png",
+    },
+  };
+}
+
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const locale = await getLocale();
+  const messages = await getMessages();
+
   return (
     <html
-      lang="ja"
+      lang={locale}
+      suppressHydrationWarning
       className={`${barlowCondensed.variable} ${notoSansJP.variable}`}
     >
-      <body>{children}</body>
+      <body className="bg-background text-foreground flex min-h-screen flex-col transition-colors duration-300">
+        <NextIntlClientProvider messages={messages}>
+          <ThemeProvider>
+            <Header />
+
+            <main className="flex-1">{children}</main>
+
+            <Footer />
+
+            <BackToTop />
+          </ThemeProvider>
+        </NextIntlClientProvider>
+      </body>
     </html>
   );
 }
