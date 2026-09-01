@@ -23,6 +23,7 @@
 | Design         | Figma                                    |
 | Frontend       | Next.js, React, TypeScript, Tailwind CSS |
 | Testing        | Playwright, axe-core, Lighthouse CI, k6  |
+| Security       | OWASP ZAP                                |
 | Infrastructure | Docker, Vercel, GitHub Actions           |
 
 ## Technical Decisions
