@@ -2,12 +2,14 @@
 
 import { useEffect, useState } from "react";
 
+import { shouldShowBackToTop } from "../lib/scroll";
+
 export default function BackToTop() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsVisible(window.scrollY > 365);
+      setIsVisible(shouldShowBackToTop(window.scrollY));
     };
 
     handleScroll();

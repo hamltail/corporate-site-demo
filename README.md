@@ -18,13 +18,13 @@
 
 ## Tech Stack
 
-| Category       | Technologies                             |
-| -------------- | ---------------------------------------- |
-| Design         | Figma                                    |
-| Frontend       | Next.js, React, TypeScript, Tailwind CSS |
-| Testing        | Playwright, axe-core, Lighthouse CI, k6  |
-| Security       | OWASP ZAP, CodeQL                        |
-| Infrastructure | Docker, Vercel, GitHub Actions           |
+| Category       | Technologies                                             |
+| -------------- | -------------------------------------------------------- |
+| Design         | Figma                                                    |
+| Frontend       | Next.js, React, TypeScript, Tailwind CSS                 |
+| Testing        | Playwright, axe-core, Lighthouse CI, k6, Vitest, Stryker |
+| Security       | OWASP ZAP, CodeQL                                        |
+| Infrastructure | Docker, Vercel, GitHub Actions                           |
 
 ## Technical Decisions
 
