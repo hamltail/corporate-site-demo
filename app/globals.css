@@ -13,6 +13,7 @@
   --subtle: #999999;
 
   --primary: #b3913b;
+  --primary-hover: #9a7a2a;
   --primary-foreground: #ffffff;
 }
 
@@ -29,6 +30,7 @@
   --color-subtle: var(--subtle);
 
   --color-primary: var(--primary);
+  --color-primary-hover: var(--primary-hover);
   --color-primary-foreground: var(--primary-foreground);
 }
 
