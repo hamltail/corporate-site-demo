@@ -4,6 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 
+import Container from "@/components/Container";
+
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -12,8 +14,8 @@ export default function Header() {
   };
 
   return (
-    <header className="relative z-50 bg-white">
-      <div className="mx-auto flex h-[80px] w-full max-w-[1120px] items-center justify-between px-7 md:px-11 lg:px-[8px]">
+    <header className="bg-surface relative z-50">
+      <Container className="flex h-20 items-center justify-between">
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/images/animal-corporation-logo.png"
@@ -29,7 +31,7 @@ export default function Header() {
         </Link>
 
         <nav aria-label="グローバルナビゲーション" className="hidden md:block">
-          <ul className="flex items-center gap-8 text-sm font-medium text-[#666666]">
+          <ul className="text-muted flex items-center gap-8 text-sm font-medium">
             <li>
               <a href="#about" className="nav-link">
                 私たちについて
@@ -64,20 +66,20 @@ export default function Header() {
           aria-controls="mobile-menu"
           onClick={() => setIsMenuOpen((previous) => !previous)}
         >
-          <span className="h-0.5 w-6 bg-black" />
-          <span className="h-0.5 w-6 bg-black" />
-          <span className="h-0.5 w-6 bg-black" />
+          <span className="bg-foreground h-0.5 w-6" />
+          <span className="bg-foreground h-0.5 w-6" />
+          <span className="bg-foreground h-0.5 w-6" />
         </button>
-      </div>
+      </Container>
 
       <nav
         id="mobile-menu"
         aria-label="モバイルナビゲーション"
-        className={`absolute inset-x-7 top-[80px] rounded-b-[16px] bg-white px-4 py-4 shadow-xl md:hidden ${
+        className={`bg-surface absolute inset-x-7 top-20 rounded-b-2xl px-4 py-4 shadow-xl md:hidden ${
           isMenuOpen ? "block" : "hidden"
         }`}
       >
-        <ul className="flex flex-col gap-4 text-base font-medium text-[#666666]">
+        <ul className="text-muted flex flex-col gap-4 text-base font-medium">
           <li>
             <a href="#about" className="nav-link" onClick={closeMenu}>
               私たちについて

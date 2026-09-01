@@ -1,26 +1,28 @@
+import Container from "@/components/Container";
+
 export default function Recruit() {
   return (
     <section id="recruit" className="py-[128px]">
-      <div className="mx-auto flex h-full w-full max-w-[1120px] flex-col justify-center px-7 md:px-11 lg:px-[8px]">
+      <Container className="flex h-full flex-col justify-center">
         <div className="flex flex-col gap-2 lg:flex-row lg:items-baseline lg:gap-8">
           <h2
             id="recruit-title"
-            className="text-left font-english text-[64px] font-bold leading-[1.2] tracking-[0.1em]"
+            className="font-english text-left text-[64px] leading-[1.2] font-bold tracking-[0.1em]"
           >
             Recruit
           </h2>
 
-          <span className="font-japanese text-[24px] font-bold text-[#B3913B]">
+          <span className="font-japanese text-primary text-[24px] font-bold">
             採用情報
           </span>
         </div>
 
         <div className="text-center">
-          <h3 className="mt-16 text-[24px] font-[500] leading-[1.3] md:text-[28px] lg:mt-24 lg:text-[32px]">
+          <h3 className="mt-16 text-[24px] leading-[1.3] font-[500] md:text-[28px] lg:mt-24 lg:text-[32px]">
             個性は、才能だ。
           </h3>
 
-          <p className="mx-auto mt-16 max-w-[680px] text-[16px] leading-[2] text-[#666666]">
+          <p className="text-muted mx-auto mt-16 max-w-[680px] text-[16px] leading-[2]">
             強いゴリラも
             <br />
             跳べるカンガルーも
@@ -30,14 +32,14 @@ export default function Recruit() {
             まっすぐな犬も
           </p>
 
-          <p className="mx-auto mt-4 max-w-[680px] text-[16px] text-[#666666]">
+          <p className="text-muted mx-auto mt-4 max-w-[680px] text-[16px]">
             Animal Corporationでは、新しい仲間を募集しています。
           </p>
 
           <a
             href="mailto:recruit@example.com"
             aria-label="採用エントリーのメールを送る"
-            className="cta-button mx-auto mt-12 inline-flex h-[48px] w-full max-w-[280px] items-center justify-center gap-3 rounded-[24px] border-2 border-[#B3913B] text-[16px] font-medium text-[#B3913B] lg:mt-16"
+            className="cta-button border-primary text-primary mx-auto mt-12 inline-flex h-12 w-full max-w-[280px] items-center justify-center gap-3 rounded-3xl border-2 text-[16px] font-medium lg:mt-16"
           >
             <svg
               width="24"
@@ -68,7 +70,7 @@ export default function Recruit() {
             <span>エントリー</span>
           </a>
         </div>
-      </div>
+      </Container>
     </section>
   );
 }

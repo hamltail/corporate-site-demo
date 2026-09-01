@@ -1,10 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import Container from "@/components/Container";
+
 export default function Footer() {
   return (
-    <footer className="bg-[#F9F6F2]">
-      <div className="mx-auto flex max-w-[1120px] flex-col items-center gap-6 px-7 py-8 md:px-11 lg:h-[96px] lg:flex-row lg:justify-between lg:gap-0 lg:px-[8px]">
+    <footer className="bg-surface-soft">
+      <Container className="flex flex-col items-center gap-6 py-8 lg:h-24 lg:flex-row lg:justify-between lg:gap-0">
         <Link href="/" className="flex items-center gap-3">
           <Image
             src="/images/animal-corporation-logo.png"
@@ -20,7 +22,7 @@ export default function Footer() {
         </Link>
 
         <nav aria-label="フッターナビゲーション">
-          <ul className="flex flex-col items-center gap-4 text-sm text-[#666666] lg:flex-row lg:gap-8">
+          <ul className="text-muted flex flex-col items-center gap-4 text-sm lg:flex-row lg:gap-8">
             <li>
               <a href="#about" className="nav-link">
                 私たちについて
@@ -41,8 +43,8 @@ export default function Footer() {
           </ul>
         </nav>
 
-        <p className="text-xs text-[#666666]">© 2026 Animal Corporation</p>
-      </div>
+        <p className="text-muted text-xs">© 2026 Animal Corporation</p>
+      </Container>
     </footer>
   );
 }
