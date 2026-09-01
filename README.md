@@ -22,7 +22,7 @@
 | -------------- | ---------------------------------------- |
 | Design         | Figma                                    |
 | Frontend       | Next.js, React, TypeScript, Tailwind CSS |
-| Testing        | Playwright                               |
+| Testing        | Playwright, axe-core                     |
 | Infrastructure | Docker, Vercel, GitHub Actions           |
 
 ## Technical Decisions
