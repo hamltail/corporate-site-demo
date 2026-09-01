@@ -1,77 +1,134 @@
-import Image from "next/image";
-
 import Container from "@/components/Container";
+
+const services = [
+  {
+    title: "Web Design",
+    text: "ブランドと目的に沿った、成果に繋がるWebデザインを提供します。",
+    icon: (
+      <svg
+        viewBox="0 0 64 64"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+        className="size-20"
+      >
+        <rect x="10" y="13" width="44" height="31" rx="2" />
+        <path d="M26 51h12" />
+        <path d="M29 44l-3 7" />
+        <path d="M35 44l3 7" />
+      </svg>
+    ),
+  },
+  {
+    title: "UI / UX Design",
+    text: "ユーザー中心の設計で、価値ある体験を設計します。",
+    icon: (
+      <svg
+        viewBox="0 0 64 64"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+        className="size-20"
+      >
+        <rect x="21" y="7" width="22" height="50" rx="5" />
+        <path d="M29 11h6" />
+        <path d="M29 52h6" />
+      </svg>
+    ),
+  },
+  {
+    title: "Front-end Development",
+    text: "パフォーマンスとメンテナンス性を重視した実装を行います。",
+    icon: (
+      <svg
+        viewBox="0 0 64 64"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+        className="size-20"
+      >
+        <path d="m23 20-12 12 12 12" />
+        <path d="m41 20 12 12-12 12" />
+        <path d="m36 13-8 38" />
+      </svg>
+    ),
+  },
+  {
+    title: "Information Architecture",
+    text: "情報設計を整え、使いやすい構造を作ります。",
+    icon: (
+      <svg
+        viewBox="0 0 64 64"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        aria-hidden="true"
+        className="size-20"
+      >
+        <rect x="27" y="7" width="10" height="10" rx="1" />
+        <rect x="9" y="45" width="10" height="10" rx="1" />
+        <rect x="27" y="45" width="10" height="10" rx="1" />
+        <rect x="45" y="45" width="10" height="10" rx="1" />
+        <path d="M32 17v12" />
+        <path d="M14 29h36" />
+        <path d="M14 29v16" />
+        <path d="M32 29v16" />
+        <path d="M50 29v16" />
+      </svg>
+    ),
+  },
+];
 
 export default function Service() {
   return (
-    <section id="service" className="py-[128px]">
+    <section id="service" className="py-32">
       <Container>
         <div className="flex flex-col gap-2 lg:flex-row lg:items-baseline lg:gap-8">
           <h2
             id="service-title"
-            className="font-english text-[64px] leading-[1.2] font-bold tracking-[0.1em]"
+            className="font-english text-[64px] leading-[1.2] font-bold tracking-widest"
           >
             Service
           </h2>
 
-          <span className="font-japanese text-primary text-[24px] font-bold">
+          <span className="font-japanese text-primary text-2xl font-bold">
             事業内容
           </span>
         </div>
 
-        <p className="text-muted mt-10 max-w-[680px] text-[16px] leading-[1.8]">
+        <p className="text-muted mt-10 max-w-170 text-base leading-[1.8]">
           デザインからフロントエンド実装、情報設計まで。
           <br />
           ユーザー体験を重視したWebサイト制作を提供しています。
         </p>
 
         <div className="mt-12 grid grid-cols-2 gap-8 lg:grid-cols-4">
-          {[
-            {
-              src: "/images/service-web-design.png",
-              alt: "Web Design icon",
-              title: "Web Design",
-              text: "ブランドと目的に沿った、成果に繋がるWebデザインを提供します。",
-            },
-            {
-              src: "/images/service-uiux-design.png",
-              alt: "UI / UX Design icon",
-              title: "UI / UX Design",
-              text: "ユーザー中心の設計で、価値ある体験を設計します。",
-            },
-            {
-              src: "/images/service-frontend-development.png",
-              alt: "Front-end Development icon",
-              title: "Front-end Development",
-              text: "パフォーマンスとメンテナンス性を重視した実装を行います。",
-            },
-            {
-              src: "/images/service-information-architecture.png",
-              alt: "Information Architecture icon",
-              title: "Information Architecture",
-              text: "情報設計を整え、使いやすい構造を作ります。",
-            },
-          ].map((service) => (
+          {services.map((service) => (
             <article
               key={service.title}
-              className="bg-surface-soft flex min-h-[320px] flex-col items-start rounded-lg p-6"
+              className="bg-surface-soft flex min-h-80 flex-col items-start rounded-lg p-6"
             >
-              <div className="bg-surface mx-auto flex h-32 w-32 items-center justify-center rounded-full">
-                <Image
-                  src={service.src}
-                  alt={service.alt}
-                  width={80}
-                  height={80}
-                  className="h-20 w-20 object-contain"
-                />
+              <div className="bg-surface text-foreground mx-auto flex size-32 items-center justify-center rounded-full">
+                {service.icon}
               </div>
 
               <div className="mt-6 w-full">
-                <h3 className="font-english text-[18px] font-bold">
+                <h3 className="font-english text-lg font-bold">
                   {service.title}
                 </h3>
 
-                <p className="text-muted mt-2 text-[14px] leading-[1.8]">
+                <p className="text-muted mt-2 text-sm leading-[1.8]">
                   {service.text}
                 </p>
               </div>

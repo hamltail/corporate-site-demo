@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 import Container from "@/components/Container";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,7 +21,7 @@ export default function Header() {
           <Image
             src="/images/animal-corporation-logo.png"
             alt="Animal Corporation Logo"
-            className="h-8 w-8 object-contain"
+            className="size-8 object-contain"
             width={32}
             height={32}
           />
@@ -30,46 +31,53 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav aria-label="グローバルナビゲーション" className="hidden md:block">
-          <ul className="text-muted flex items-center gap-8 text-sm font-medium">
-            <li>
-              <a href="#about" className="nav-link">
-                私たちについて
-              </a>
-            </li>
+        <div className="flex items-center gap-6">
+          <nav
+            aria-label="グローバルナビゲーション"
+            className="hidden md:block"
+          >
+            <ul className="text-muted flex items-center gap-8 text-sm font-medium">
+              <li>
+                <a href="#about" className="nav-link">
+                  私たちについて
+                </a>
+              </li>
 
-            <li>
-              <a href="#news" className="nav-link">
-                お知らせ
-              </a>
-            </li>
+              <li>
+                <a href="#news" className="nav-link">
+                  お知らせ
+                </a>
+              </li>
 
-            <li>
-              <a href="#contact" className="nav-link">
-                お問い合わせ
-              </a>
-            </li>
+              <li>
+                <a href="#contact" className="nav-link">
+                  お問い合わせ
+                </a>
+              </li>
 
-            <li>
-              <a href="#recruit" className="nav-link">
-                採用情報
-              </a>
-            </li>
-          </ul>
-        </nav>
+              <li>
+                <a href="#recruit" className="nav-link">
+                  採用情報
+                </a>
+              </li>
+            </ul>
+          </nav>
 
-        <button
-          type="button"
-          className="flex flex-col gap-1.5 md:hidden"
-          aria-label="メニューを開閉"
-          aria-expanded={isMenuOpen}
-          aria-controls="mobile-menu"
-          onClick={() => setIsMenuOpen((previous) => !previous)}
-        >
-          <span className="bg-foreground h-0.5 w-6" />
-          <span className="bg-foreground h-0.5 w-6" />
-          <span className="bg-foreground h-0.5 w-6" />
-        </button>
+          <button
+            type="button"
+            className="flex flex-col gap-1.5 md:hidden"
+            aria-label="メニューを開閉"
+            aria-expanded={isMenuOpen}
+            aria-controls="mobile-menu"
+            onClick={() => setIsMenuOpen((previous) => !previous)}
+          >
+            <span className="bg-foreground h-0.5 w-6" />
+            <span className="bg-foreground h-0.5 w-6" />
+            <span className="bg-foreground h-0.5 w-6" />
+          </button>
+
+          <ThemeSwitcher />
+        </div>
       </Container>
 
       <nav

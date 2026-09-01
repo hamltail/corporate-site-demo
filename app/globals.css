@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 :root {
+  color-scheme: light;
+
   --background: #ffffff;
   --foreground: #000000;
 
@@ -15,6 +17,25 @@
   --primary: #b3913b;
   --primary-hover: #9a7a2a;
   --primary-foreground: #ffffff;
+}
+
+.dark {
+  color-scheme: dark;
+
+  --background: #151411;
+  --foreground: #f5f3ee;
+
+  --surface: #1d1b17;
+  --surface-soft: #24211b;
+  --surface-chip: #2d2921;
+
+  --border: #4a4438;
+  --muted: #c4beb2;
+  --subtle: #938b7d;
+
+  --primary: #d2b45d;
+  --primary-hover: #e0c873;
+  --primary-foreground: #151411;
 }
 
 @theme inline {
@@ -63,7 +84,7 @@
   }
 
   .chip {
-    @apply bg-surface-chip text-muted inline-flex items-center rounded-full px-3 py-1 text-[12px] font-medium;
+    @apply bg-surface-chip text-muted inline-flex items-center rounded-full px-3 py-1 text-xs font-medium;
   }
 
   .cta-button {
@@ -87,7 +108,7 @@
 
   .nav-link::after {
     content: "";
-    @apply bg-primary absolute -bottom-1 left-0 h-[2px] w-0 transition-all duration-300 ease-out;
+    @apply bg-primary absolute -bottom-1 left-0 h-0.5 w-0 transition-all duration-300 ease-out;
   }
 
   .nav-link:hover::after,

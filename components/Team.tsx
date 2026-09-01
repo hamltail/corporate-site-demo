@@ -31,22 +31,22 @@ const members = [
 
 export default function Team() {
   return (
-    <section id="team" className="py-[128px]">
+    <section id="team" className="py-32">
       <Container>
         <div className="flex flex-col gap-2 lg:flex-row lg:items-baseline lg:gap-8">
           <h2
             id="team-title"
-            className="font-english text-[64px] leading-[1.2] font-bold tracking-[0.1em]"
+            className="font-english text-[64px] leading-[1.2] font-bold tracking-widest"
           >
             Team
           </h2>
 
-          <span className="font-japanese text-primary text-[24px] font-bold">
+          <span className="font-japanese text-primary text-2xl font-bold">
             メンバー
           </span>
         </div>
 
-        <p className="text-muted mt-10 max-w-[680px] text-[16px] leading-[1.8]">
+        <p className="text-muted mt-10 max-w-170 text-base leading-[1.8]">
           それぞれの専門性を持つアニマルメンバーをご紹介します。
         </p>
 
@@ -54,26 +54,24 @@ export default function Team() {
           {members.map((member) => (
             <article
               key={member.name}
-              className="team-card project-shadow bg-surface-soft flex flex-col overflow-hidden rounded-2xl lg:min-h-[360px]"
+              className="team-card project-shadow bg-surface-soft flex flex-col overflow-hidden rounded-2xl lg:min-h-90"
             >
               <Image
                 src={member.image}
                 alt={member.name}
                 width={360}
                 height={360}
-                className="bg-surface-soft h-[360px] w-full object-contain md:h-[300px] lg:h-[240px]"
+                className="bg-surface-soft h-90 w-full object-contain md:h-75 lg:h-60"
               />
 
               <div className="flex flex-col p-5 md:p-6">
-                <p className="text-subtle text-[12px] font-medium">
-                  {member.role}
-                </p>
+                <p className="text-subtle text-xs font-medium">{member.role}</p>
 
-                <h3 className="font-english mt-2 text-[16px] font-bold">
+                <h3 className="font-english mt-2 text-base font-bold">
                   {member.name}
                 </h3>
 
-                <p className="text-muted mt-2 text-[14px] leading-[1.8]">
+                <p className="text-muted mt-2 text-sm leading-[1.8]">
                   {member.message}
                 </p>
               </div>

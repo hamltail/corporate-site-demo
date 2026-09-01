@@ -4,6 +4,7 @@ import { Barlow_Condensed, Noto_Sans_JP } from "next/font/google";
 import BackToTop from "@/components/BackToTop";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import ThemeProvider from "@/components/ThemeProvider";
 
 import "./globals.css";
 
@@ -37,16 +38,19 @@ export default function RootLayout({
   return (
     <html
       lang="ja"
+      suppressHydrationWarning
       className={`${barlowCondensed.variable} ${notoSansJP.variable}`}
     >
-      <body className="bg-background text-foreground flex min-h-screen flex-col">
-        <Header />
+      <body className="bg-background text-foreground flex min-h-screen flex-col transition-colors duration-300">
+        <ThemeProvider>
+          <Header />
 
-        <main className="flex-1">{children}</main>
+          <main className="flex-1">{children}</main>
 
-        <Footer />
+          <Footer />
 
-        <BackToTop />
+          <BackToTop />
+        </ThemeProvider>
       </body>
     </html>
   );

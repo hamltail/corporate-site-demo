@@ -4,40 +4,40 @@ import Container from "@/components/Container";
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-[128px]">
+    <section id="projects" className="py-32">
       <Container>
         <div className="flex flex-col gap-2 lg:flex-row lg:items-baseline lg:gap-8">
           <h2
             id="projects-title"
-            className="font-english text-[64px] leading-[1.2] font-bold tracking-[0.1em]"
+            className="font-english text-[64px] leading-[1.2] font-bold tracking-widest"
           >
             Projects
           </h2>
 
-          <span className="font-japanese text-primary text-[24px] font-bold">
+          <span className="font-japanese text-primary text-2xl font-bold">
             制作実績
           </span>
         </div>
 
-        <p className="text-muted mt-10 max-w-[680px] text-[16px] leading-[1.8]">
+        <p className="text-muted mt-10 max-w-170 text-base leading-[1.8]">
           デザインと技術を活かして制作した
           <br />
           Webサイトやアプリケーションの実績をご覧ください。
         </p>
 
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <article className="project-shadow bg-surface flex min-h-[436px] flex-col overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-2">
+          <article className="project-shadow bg-surface flex min-h-109 flex-col overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-2">
             <Image
               src="/images/projects-pawth.png"
               alt="Pawth project thumbnail"
               width={480}
               height={240}
-              className="bg-surface h-[240px] w-full object-contain"
+              className="bg-surface h-60 w-full object-contain"
             />
 
             <div className="flex flex-1 flex-col p-6">
               <div className="flex items-start justify-between">
-                <h3 className="font-english text-[18px] font-bold">Pawth</h3>
+                <h3 className="font-english text-lg font-bold">Pawth</h3>
 
                 <a
                   href="https://pawth-lp.hamltail.dev/"
@@ -79,7 +79,7 @@ export default function Projects() {
                 </a>
               </div>
 
-              <p className="text-muted mt-3 min-h-[52px] text-[14px] leading-[1.8]">
+              <p className="text-muted mt-3 min-h-13 text-sm leading-[1.8]">
                 日々の足あとを描く。小さな日記アプリ
               </p>
 
@@ -95,21 +95,21 @@ export default function Projects() {
             </div>
           </article>
 
-          <article className="project-shadow bg-surface flex min-h-[436px] flex-col overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-2">
+          <article className="project-shadow bg-surface flex min-h-109 flex-col overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-2">
             <Image
               src="/images/projects-animal-corporation.png"
               alt="Animal Corporation project thumbnail"
               width={480}
               height={240}
-              className="bg-surface h-[240px] w-full object-contain"
+              className="bg-surface h-60 w-full object-contain"
             />
 
             <div className="flex flex-1 flex-col p-6">
-              <h3 className="font-english text-[18px] font-bold">
+              <h3 className="font-english text-lg font-bold">
                 Animal Corporation
               </h3>
 
-              <p className="text-muted mt-3 min-h-[52px] text-[14px] leading-[1.8]">
+              <p className="text-muted mt-3 min-h-13 text-sm leading-[1.8]">
                 コーポレートサイト制作（架空プロジェクト）
               </p>
 
@@ -125,27 +125,27 @@ export default function Projects() {
             </div>
           </article>
 
-          <article className="project-shadow bg-surface flex min-h-[436px] flex-col overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-2">
+          <article className="project-shadow bg-surface flex min-h-109 flex-col overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-2">
             <Image
               src="/images/projects-animal-caffee.png"
               alt="Animal Caffee project thumbnail"
               width={480}
               height={240}
-              className="bg-surface h-[240px] w-full object-contain"
+              className="bg-surface h-60 w-full object-contain"
             />
 
             <div className="flex flex-1 flex-col p-6">
               <div className="flex items-start justify-between">
-                <h3 className="font-english text-[18px] font-bold">
+                <h3 className="font-english text-lg font-bold">
                   Animal Caffee
                 </h3>
 
-                <span className="bg-surface-chip text-muted rounded px-3 py-1 text-[12px] font-medium">
+                <span className="bg-surface-chip text-muted rounded px-3 py-1 text-xs font-medium">
                   準備中
                 </span>
               </div>
 
-              <p className="text-muted mt-3 min-h-[52px] text-[14px] leading-[1.8]">
+              <p className="text-muted mt-3 min-h-13 text-sm leading-[1.8]">
                 アニマルカフェのサイトリニューアル（架空）
               </p>
 

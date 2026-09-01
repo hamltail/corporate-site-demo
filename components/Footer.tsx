@@ -13,7 +13,7 @@ export default function Footer() {
             alt="Animal Corporation Logo"
             width={32}
             height={32}
-            className="h-8 w-8 object-contain"
+            className="size-8 object-contain"
           />
 
           <span className="font-english whitespace-nowrap text-base tracking-[0.18em]">
