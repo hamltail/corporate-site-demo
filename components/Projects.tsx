@@ -27,13 +27,15 @@ export default function Projects() {
 
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           <article className="project-shadow bg-surface flex min-h-109 flex-col overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-2">
-            <Image
-              src="/images/projects-pawth.png"
-              alt="Pawth project thumbnail"
-              width={480}
-              height={240}
-              className="bg-surface h-60 w-full object-contain"
-            />
+            <div className="bg-surface relative h-60 w-full">
+              <Image
+                src="/images/projects-pawth.png"
+                alt="Pawth project thumbnail"
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                className="object-contain"
+              />
+            </div>
 
             <div className="flex flex-1 flex-col p-6">
               <div className="flex items-start justify-between">
@@ -96,13 +98,15 @@ export default function Projects() {
           </article>
 
           <article className="project-shadow bg-surface flex min-h-109 flex-col overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-2">
-            <Image
-              src="/images/projects-animal-corporation.png"
-              alt="Animal Corporation project thumbnail"
-              width={480}
-              height={240}
-              className="bg-surface h-60 w-full object-contain"
-            />
+            <div className="bg-surface relative h-60 w-full">
+              <Image
+                src="/images/projects-animal-corporation.png"
+                alt="Animal Corporation project thumbnail"
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                className="object-contain"
+              />
+            </div>
 
             <div className="flex flex-1 flex-col p-6">
               <h3 className="font-english text-lg font-bold">
@@ -126,13 +130,15 @@ export default function Projects() {
           </article>
 
           <article className="project-shadow bg-surface flex min-h-109 flex-col overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-2">
-            <Image
-              src="/images/projects-animal-caffee.png"
-              alt="Animal Caffee project thumbnail"
-              width={480}
-              height={240}
-              className="bg-surface h-60 w-full object-contain"
-            />
+            <div className="bg-surface relative h-60 w-full">
+              <Image
+                src="/images/projects-animal-caffee.png"
+                alt="Animal Caffee project thumbnail"
+                fill
+                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                className="object-contain"
+              />
+            </div>
 
             <div className="flex flex-1 flex-col p-6">
               <div className="flex items-start justify-between">
