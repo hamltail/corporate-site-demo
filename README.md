@@ -22,6 +22,7 @@
 | -------------- | ---------------------------------------- |
 | Design         | Figma                                    |
 | Frontend       | Next.js, React, TypeScript, Tailwind CSS |
+| Testing        | Playwright                               |
 | Infrastructure | Docker, Vercel, GitHub Actions           |
 
 ## Technical Decisions
