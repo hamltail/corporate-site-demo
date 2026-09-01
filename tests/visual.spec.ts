@@ -31,6 +31,9 @@ test("Animal Corporationの見た目が基準画像と一致する", async ({ pa
     window.scrollTo(0, 0);
   });
 
+  // スクロール連動要素の状態が安定するのを待つ
+  await page.waitForTimeout(1000);
+
   await expect(page).toHaveScreenshot("animal-corporation.png", {
     fullPage: true,
     animations: "disabled",
