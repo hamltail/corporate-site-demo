@@ -22,7 +22,7 @@
 | -------------- | ---------------------------------------- |
 | Design         | Figma                                    |
 | Frontend       | Next.js, React, TypeScript, Tailwind CSS |
-| Infrastructure | Docker, Vercel                           |
+| Infrastructure | Docker, Vercel, GitHub Actions           |
 
 ## Technical Decisions
 
