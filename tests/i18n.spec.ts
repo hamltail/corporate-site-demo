@@ -51,5 +51,34 @@ test.describe("English locale", () => {
         exact: true,
       }),
     ).toBeVisible();
+
+    await expect(
+      footer.getByRole("button", {
+        name: "English",
+      }),
+    ).toHaveAttribute("aria-pressed", "true");
+  });
+
+  test("Footerから日本語へ切り替えられる", async ({ page }) => {
+    await page.goto("/");
+
+    await expect(page.locator("html")).toHaveAttribute("lang", "en");
+
+    await page
+      .locator("footer")
+      .getByRole("button", {
+        name: "日本語",
+      })
+      .click();
+
+    await expect(page.locator("html")).toHaveAttribute("lang", "ja");
+
+    await expect(page.locator("#about")).toContainText("私たちについて");
+
+    await expect(
+      page.locator("footer").getByRole("button", {
+        name: "日本語",
+      }),
+    ).toHaveAttribute("aria-pressed", "true");
   });
 });
