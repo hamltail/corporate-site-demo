@@ -1,6 +1,10 @@
+import { useTranslations } from "next-intl";
+
 import Container from "@/components/Container";
 
 export default function Recruit() {
+  const t = useTranslations("Recruit");
+
   return (
     <section id="recruit" className="py-32">
       <Container className="flex h-full flex-col justify-center">
@@ -13,32 +17,32 @@ export default function Recruit() {
           </h2>
 
           <span className="font-japanese text-primary text-2xl font-bold">
-            採用情報
+            {t("label")}
           </span>
         </div>
 
         <div className="text-center">
           <h3 className="mt-16 text-2xl leading-[1.3] font-medium md:text-[28px] lg:mt-24 lg:text-[32px]">
-            個性は、才能だ。
+            {t("title")}
           </h3>
 
           <p className="text-muted mx-auto mt-16 max-w-170 text-base leading-loose">
-            強いゴリラも
+            {t("gorilla")}
             <br />
-            跳べるカンガルーも
+            {t("kangaroo")}
             <br />
-            繊細なネコも
+            {t("cat")}
             <br />
-            まっすぐな犬も
+            {t("dog")}
           </p>
 
           <p className="text-muted mx-auto mt-4 max-w-170 text-base">
-            Animal Corporationでは、新しい仲間を募集しています。
+            {t("description")}
           </p>
 
           <a
             href="mailto:recruit@example.com"
-            aria-label="採用エントリーのメールを送る"
+            aria-label={t("mailLabel")}
             className="cta-button border-primary text-primary mx-auto mt-12 inline-flex h-12 w-full max-w-70 items-center justify-center gap-3 rounded-3xl border-2 text-base font-medium lg:mt-16"
           >
             <svg
@@ -67,7 +71,7 @@ export default function Recruit() {
               />
             </svg>
 
-            <span>エントリー</span>
+            <span>{t("button")}</span>
           </a>
         </div>
       </Container>

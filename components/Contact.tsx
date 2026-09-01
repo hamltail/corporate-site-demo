@@ -1,6 +1,10 @@
+import { useTranslations } from "next-intl";
+
 import Container from "@/components/Container";
 
 export default function Contact() {
+  const t = useTranslations("Contact");
+
   return (
     <section id="contact" className="py-32">
       <Container>
@@ -13,23 +17,22 @@ export default function Contact() {
           </h2>
 
           <span className="font-japanese text-primary text-2xl font-bold">
-            お問い合わせ
+            {t("label")}
           </span>
         </div>
 
         <div className="text-center">
           <h3 className="mt-16 text-2xl leading-[1.3] font-medium md:text-[28px] lg:mt-24 lg:text-[32px]">
-            新しい体験を、一緒につくりませんか？
+            {t("title")}
           </h3>
 
           <p className="text-muted mx-auto mt-10 max-w-170 text-base leading-[1.8] md:mt-12 lg:mt-16">
-            サービス開発やWeb制作、デザインに関するご相談など、
-            お気軽にお問い合わせください。
+            {t("description")}
           </p>
 
           <a
             href="mailto:info@example.com"
-            aria-label="メールでお問い合わせ"
+            aria-label={t("mailLabel")}
             className="cta-button border-primary text-primary mx-auto mt-12 inline-flex h-12 w-full max-w-70 items-center justify-center gap-3 rounded-3xl border-2 text-base font-medium lg:mt-16"
           >
             <svg
@@ -59,7 +62,7 @@ export default function Contact() {
               />
             </svg>
 
-            <span>お問い合わせ</span>
+            <span>{t("button")}</span>
           </a>
         </div>
       </Container>

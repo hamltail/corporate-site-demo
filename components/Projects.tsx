@@ -1,8 +1,11 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import Container from "@/components/Container";
 
 export default function Projects() {
+  const t = useTranslations("Projects");
+
   return (
     <section id="projects" className="py-32">
       <Container>
@@ -15,14 +18,14 @@ export default function Projects() {
           </h2>
 
           <span className="font-japanese text-primary text-2xl font-bold">
-            制作実績
+            {t("label")}
           </span>
         </div>
 
         <p className="text-muted mt-10 max-w-170 text-base leading-[1.8]">
-          デザインと技術を活かして制作した
+          {t("introFirst")}
           <br />
-          Webサイトやアプリケーションの実績をご覧ください。
+          {t("introSecond")}
         </p>
 
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
@@ -46,7 +49,7 @@ export default function Projects() {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="text-muted hover:text-foreground transition-colors"
-                  aria-label="パウスのプロジェクトを開く"
+                  aria-label={t("pawthOpen")}
                 >
                   <svg
                     width="20"
@@ -82,11 +85,11 @@ export default function Projects() {
               </div>
 
               <p className="text-muted mt-3 min-h-13 text-sm leading-[1.8]">
-                日々の足あとを描く。小さな日記アプリ
+                {t("pawthDescription")}
               </p>
 
               <div className="text-subtle mt-3 text-[13px]">
-                企画 / デザイン / 開発
+                {t("pawthWork")}
               </div>
 
               <div className="mt-3 flex items-center gap-3">
@@ -114,11 +117,11 @@ export default function Projects() {
               </h3>
 
               <p className="text-muted mt-3 min-h-13 text-sm leading-[1.8]">
-                コーポレートサイト制作（架空プロジェクト）
+                {t("animalDescription")}
               </p>
 
               <div className="text-subtle mt-3 text-[13px]">
-                情報設計 / デザイン / フロントエンド
+                {t("animalWork")}
               </div>
 
               <div className="mt-3 flex items-center gap-3">
@@ -147,16 +150,16 @@ export default function Projects() {
                 </h3>
 
                 <span className="bg-surface-chip text-muted rounded px-3 py-1 text-xs font-medium">
-                  準備中
+                  {t("comingSoon")}
                 </span>
               </div>
 
               <p className="text-muted mt-3 min-h-13 text-sm leading-[1.8]">
-                アニマルカフェのサイトリニューアル（架空）
+                {t("caffeeDescription")}
               </p>
 
               <div className="text-subtle mt-3 text-[13px]">
-                UI UXデザイン / コーディング / 写真・素材選定
+                {t("caffeeWork")}
               </div>
 
               <div className="mt-3 flex items-center gap-3">

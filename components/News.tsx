@@ -1,6 +1,10 @@
+import { useTranslations } from "next-intl";
+
 import Container from "@/components/Container";
 
 export default function News() {
+  const t = useTranslations("News");
+
   return (
     <section id="news" className="py-32">
       <Container>
@@ -13,7 +17,7 @@ export default function News() {
           </h2>
 
           <span className="font-japanese text-primary text-2xl font-bold">
-            お知らせ
+            {t("label")}
           </span>
         </div>
 
@@ -27,15 +31,14 @@ export default function News() {
 
             <div className="flex-1">
               <p className="text-lg font-bold">
-                Animal Caffee をオープンしました。
+                {t("caffee.title")}
                 <span className="bg-primary text-primary-foreground ml-3 inline-block rounded-full px-3 py-1 text-xs">
                   New
                 </span>
               </p>
 
               <p className="text-muted mt-3 text-base leading-[1.8]">
-                動物たちが集う新しいコミュニティスペースとして、Animal Caffee
-                を公開しました。
+                {t("caffee.description")}
               </p>
             </div>
           </article>
@@ -48,10 +51,10 @@ export default function News() {
             </div>
 
             <div className="flex-1">
-              <p className="text-lg font-bold">新メンバーが参加しました。</p>
+              <p className="text-lg font-bold">{t("member.title")}</p>
 
               <p className="text-muted mt-3 text-base leading-[1.8]">
-                Design Technologist として柴田ケンが加わりました。
+                {t("member.description")}
               </p>
             </div>
           </article>
@@ -64,12 +67,10 @@ export default function News() {
             </div>
 
             <div className="flex-1">
-              <p className="text-lg font-bold">
-                Animal Corporation を設立しました。
-              </p>
+              <p className="text-lg font-bold">{t("company.title")}</p>
 
               <p className="text-muted mt-3 text-base leading-[1.8]">
-                デザインとテクノロジーで、より良い体験を届けるために設立しました。
+                {t("company.description")}
               </p>
             </div>
           </article>

@@ -4,6 +4,8 @@
 
 情報設計からUIデザイン、フロントエンド実装、公開までを一貫して行い、ユーザーにとって分かりやすい情報構造と、シンプルで美しいデザインを意識して制作しました。
 
+また、Web開発における技術検証にも取り組んでいます。
+
 ## Live Demo
 
 🌐 [Webサイトを見る](https://animal.hamltail.dev/)
@@ -21,7 +23,7 @@
 | Category       | Technologies                                             |
 | -------------- | -------------------------------------------------------- |
 | Design         | Figma                                                    |
-| Frontend       | Next.js, React, TypeScript, Tailwind CSS                 |
+| Frontend       | Next.js, React, TypeScript, Tailwind CSS, next-intl      |
 | Testing        | Playwright, axe-core, Lighthouse CI, k6, Vitest, Stryker |
 | Security       | OWASP ZAP, CodeQL                                        |
 | Infrastructure | Docker, Vercel, GitHub Actions                           |

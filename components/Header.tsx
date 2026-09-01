@@ -2,12 +2,14 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import { useState } from "react";
 
 import Container from "@/components/Container";
 import ThemeSwitcher from "@/components/ThemeSwitcher";
 
 export default function Header() {
+  const t = useTranslations("Header");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const closeMenu = () => {
@@ -33,31 +35,31 @@ export default function Header() {
 
         <div className="flex items-center gap-6">
           <nav
-            aria-label="グローバルナビゲーション"
+            aria-label={t("globalNavigation")}
             className="hidden shrink-0 md:block"
           >
             <ul className="text-muted flex items-center gap-8 whitespace-nowrap text-sm font-medium">
               <li>
                 <a href="#about" className="nav-link">
-                  私たちについて
+                  {t("about")}
                 </a>
               </li>
 
               <li>
                 <a href="#news" className="nav-link">
-                  お知らせ
+                  {t("news")}
                 </a>
               </li>
 
               <li>
                 <a href="#contact" className="nav-link">
-                  お問い合わせ
+                  {t("contact")}
                 </a>
               </li>
 
               <li>
                 <a href="#recruit" className="nav-link">
-                  採用情報
+                  {t("recruit")}
                 </a>
               </li>
             </ul>
@@ -66,7 +68,7 @@ export default function Header() {
           <button
             type="button"
             className="flex flex-col gap-1.5 md:hidden"
-            aria-label="メニューを開閉"
+            aria-label={t("toggleMenu")}
             aria-expanded={isMenuOpen}
             aria-controls="mobile-menu"
             onClick={() => setIsMenuOpen((previous) => !previous)}
@@ -82,7 +84,7 @@ export default function Header() {
 
       <nav
         id="mobile-menu"
-        aria-label="モバイルナビゲーション"
+        aria-label={t("mobileNavigation")}
         aria-hidden={!isMenuOpen}
         className={`bg-surface absolute inset-x-7 top-20 rounded-b-2xl px-4 py-4 shadow-xl transition-opacity duration-300 ease-out md:hidden ${
           isMenuOpen
@@ -93,25 +95,25 @@ export default function Header() {
         <ul className="text-muted flex flex-col gap-4 text-base font-medium">
           <li>
             <a href="#about" className="nav-link" onClick={closeMenu}>
-              私たちについて
+              {t("about")}
             </a>
           </li>
 
           <li>
             <a href="#news" className="nav-link" onClick={closeMenu}>
-              お知らせ
+              {t("news")}
             </a>
           </li>
 
           <li>
             <a href="#contact" className="nav-link" onClick={closeMenu}>
-              お問い合わせ
+              {t("contact")}
             </a>
           </li>
 
           <li>
             <a href="#recruit" className="nav-link" onClick={closeMenu}>
-              採用情報
+              {t("recruit")}
             </a>
           </li>
         </ul>

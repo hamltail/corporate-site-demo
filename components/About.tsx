@@ -1,8 +1,11 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import Container from "@/components/Container";
 
 export default function About() {
+  const t = useTranslations("About");
+
   return (
     <section id="about" className="py-32">
       <Container className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-[minmax(0,5fr)_minmax(0,7fr)]">
@@ -16,19 +19,18 @@ export default function About() {
             </h2>
 
             <span className="font-japanese text-primary text-2xl font-bold">
-              私たちについて
+              {t("label")}
             </span>
           </div>
 
           <p className="text-foreground mt-16 text-2xl leading-[1.6] font-medium">
-            デザインとテクノロジーで、
+            {t("leadFirst")}
             <br />
-            より良い体験と未来を作る。
+            {t("leadSecond")}
           </p>
 
           <p className="text-muted mt-16 text-base leading-[1.8]">
-            Animal
-            Corporationは、デザインとテクノロジーの力で、人の行動や社会の仕組みをより良い方向へ導く体験を設計するデザインスタジオです。ユーザーの気持ちに寄り添い、ビジネスの成長につながる本質的な価値を生み出します。
+            {t("description")}
           </p>
         </div>
 
@@ -49,7 +51,7 @@ export default function About() {
                 </h3>
 
                 <p className="text-muted mt-2 text-sm leading-[1.8]">
-                  人を中心に考え、共感を軸に体験を設計します。
+                  {t("humanCentered")}
                 </p>
               </div>
             </article>
@@ -69,7 +71,7 @@ export default function About() {
                 </h3>
 
                 <p className="text-muted mt-2 text-sm leading-[1.8]">
-                  ビジネスと社会に、継続的なインパクトを生み出します。
+                  {t("impactful")}
                 </p>
               </div>
             </article>
@@ -89,7 +91,7 @@ export default function About() {
                 </h3>
 
                 <p className="text-muted mt-2 text-sm leading-[1.8]">
-                  最新のテクノロジーを活用し、最適な解決策を実現します。
+                  {t("technologyDriven")}
                 </p>
               </div>
             </article>
@@ -109,7 +111,7 @@ export default function About() {
                 </h3>
 
                 <p className="text-muted mt-2 text-sm leading-[1.8]">
-                  シンプルで美しく、使いやすい体験を追求します。
+                  {t("simpleBeautiful")}
                 </p>
               </div>
             </article>

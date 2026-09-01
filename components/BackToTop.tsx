@@ -1,10 +1,12 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import { useEffect, useState } from "react";
 
 import { shouldShowBackToTop } from "../lib/scroll";
 
 export default function BackToTop() {
+  const t = useTranslations("BackToTop");
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
@@ -36,7 +38,7 @@ export default function BackToTop() {
           ? "visible translate-y-0 opacity-100"
           : "invisible translate-y-2 opacity-0"
       }`}
-      aria-label="トップへ戻る"
+      aria-label={t("label")}
     >
       <svg
         viewBox="0 0 24 24"

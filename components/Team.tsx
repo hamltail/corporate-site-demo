@@ -1,35 +1,30 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 import Container from "@/components/Container";
 
 const members = [
   {
+    id: "goro",
     image: "/images/team-goro.png",
-    name: "黒森 ゴロウ",
-    role: "代表取締役社長 / CEO",
-    message: "力は仲間のために使う。それが私の信念です。",
   },
   {
+    id: "ko",
     image: "/images/team-ko.png",
-    name: "南 考",
-    role: "取締役副社長 / COO",
-    message: "仲間が高く跳べるように。私はその助走を支えます。",
   },
   {
+    id: "miu",
     image: "/images/team-miu.png",
-    name: "白雪 ミウ",
-    role: "取締役 / CDO",
-    message: "美しさは思いやりから生まれる。心に残る体験を届けたい。",
   },
   {
+    id: "ken",
     image: "/images/team-ken.png",
-    name: "柴田 ケン",
-    role: "Design Technologist",
-    message: "心を動かす体験を、テクノロジーの力で届けます。",
   },
-];
+] as const;
 
 export default function Team() {
+  const t = useTranslations("Team");
+
   return (
     <section id="team" className="py-32">
       <Container>
@@ -42,37 +37,39 @@ export default function Team() {
           </h2>
 
           <span className="font-japanese text-primary text-2xl font-bold">
-            メンバー
+            {t("label")}
           </span>
         </div>
 
         <p className="text-muted mt-10 max-w-170 text-base leading-[1.8]">
-          それぞれの専門性を持つアニマルメンバーをご紹介します。
+          {t("intro")}
         </p>
 
         <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
           {members.map((member) => (
             <article
-              key={member.name}
+              key={member.id}
               className="team-card project-shadow bg-surface-soft flex flex-col overflow-hidden rounded-2xl lg:min-h-90"
             >
               <Image
                 src={member.image}
-                alt={member.name}
+                alt={t(`${member.id}.name`)}
                 width={360}
                 height={360}
                 className="bg-surface-soft h-90 w-full object-contain md:h-75 lg:h-60"
               />
 
               <div className="flex flex-col p-5 md:p-6">
-                <p className="text-subtle text-xs font-medium">{member.role}</p>
+                <p className="text-subtle text-xs font-medium">
+                  {t(`${member.id}.role`)}
+                </p>
 
                 <h3 className="font-english mt-2 text-base font-bold">
-                  {member.name}
+                  {t(`${member.id}.name`)}
                 </h3>
 
                 <p className="text-muted mt-2 text-sm leading-[1.8]">
-                  {member.message}
+                  {t(`${member.id}.message`)}
                 </p>
               </div>
             </article>

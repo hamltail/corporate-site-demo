@@ -1,9 +1,11 @@
+import { useTranslations } from "next-intl";
+
 import Container from "@/components/Container";
 
 const services = [
   {
     title: "Web Design",
-    text: "ブランドと目的に沿った、成果に繋がるWebデザインを提供します。",
+    messageKey: "webDesign",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -24,7 +26,7 @@ const services = [
   },
   {
     title: "UI / UX Design",
-    text: "ユーザー中心の設計で、価値ある体験を設計します。",
+    messageKey: "uiUxDesign",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -44,7 +46,7 @@ const services = [
   },
   {
     title: "Front-end Development",
-    text: "パフォーマンスとメンテナンス性を重視した実装を行います。",
+    messageKey: "frontEndDevelopment",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -64,7 +66,7 @@ const services = [
   },
   {
     title: "Information Architecture",
-    text: "情報設計を整え、使いやすい構造を作ります。",
+    messageKey: "informationArchitecture",
     icon: (
       <svg
         viewBox="0 0 64 64"
@@ -88,9 +90,11 @@ const services = [
       </svg>
     ),
   },
-];
+] as const;
 
 export default function Service() {
+  const t = useTranslations("Service");
+
   return (
     <section id="service" className="py-32">
       <Container>
@@ -103,14 +107,14 @@ export default function Service() {
           </h2>
 
           <span className="font-japanese text-primary text-2xl font-bold">
-            事業内容
+            {t("label")}
           </span>
         </div>
 
         <p className="text-muted mt-10 max-w-170 text-base leading-[1.8]">
-          デザインからフロントエンド実装、情報設計まで。
+          {t("introFirst")}
           <br />
-          ユーザー体験を重視したWebサイト制作を提供しています。
+          {t("introSecond")}
         </p>
 
         <div className="mt-12 grid grid-cols-2 gap-8 lg:grid-cols-4">
@@ -129,7 +133,7 @@ export default function Service() {
                 </h3>
 
                 <p className="text-muted mt-2 text-sm leading-[1.8]">
-                  {service.text}
+                  {t(service.messageKey)}
                 </p>
               </div>
             </article>

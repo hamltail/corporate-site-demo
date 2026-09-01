@@ -1,6 +1,10 @@
+import { useTranslations } from "next-intl";
+
 import Container from "@/components/Container";
 
 export default function Hero() {
+  const t = useTranslations("Hero");
+
   return (
     <section className="flex min-h-150 items-center md:min-h-175 lg:min-h-200">
       <Container className="flex h-full items-center">
@@ -20,9 +24,9 @@ export default function Hero() {
           </h1>
 
           <p className="text-muted mt-8 text-base leading-[1.6] font-medium md:mt-16 md:text-xl lg:mt-24 lg:text-2xl">
-            デザインとテクノロジーで、
+            {t("leadFirst")}
             <br />
-            より良い体験と未来を作る。
+            {t("leadSecond")}
           </p>
         </div>
       </Container>
