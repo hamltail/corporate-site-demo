@@ -51,13 +51,15 @@ export default function Team() {
               key={member.id}
               className="team-card project-shadow bg-surface-soft flex flex-col overflow-hidden rounded-2xl lg:min-h-90"
             >
-              <Image
-                src={member.image}
-                alt={t(`${member.id}.name`)}
-                width={360}
-                height={360}
-                className="bg-surface-soft h-90 w-full object-contain md:h-75 lg:h-60"
-              />
+              <div className="bg-surface-soft relative h-90 w-full md:h-75 lg:h-60">
+                <Image
+                  src={member.image}
+                  alt={t(`${member.id}.name`)}
+                  fill
+                  sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
+                  className="object-contain"
+                />
+              </div>
 
               <div className="flex flex-col p-5 md:p-6">
                 <p className="text-subtle text-xs font-medium">
