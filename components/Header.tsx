@@ -17,7 +17,7 @@ export default function Header() {
   return (
     <header className="bg-surface relative z-50">
       <Container className="flex h-20 items-center justify-between">
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" className="flex shrink-0 items-center gap-3">
           <Image
             src="/images/animal-corporation-logo.png"
             alt="Animal Corporation Logo"
@@ -26,7 +26,7 @@ export default function Header() {
             height={32}
           />
 
-          <span className="font-english text-base tracking-[0.18em]">
+          <span className="font-english whitespace-nowrap text-base tracking-[0.18em]">
             Animal Corporation
           </span>
         </Link>
@@ -34,9 +34,9 @@ export default function Header() {
         <div className="flex items-center gap-6">
           <nav
             aria-label="グローバルナビゲーション"
-            className="hidden md:block"
+            className="hidden shrink-0 md:block"
           >
-            <ul className="text-muted flex items-center gap-8 text-sm font-medium">
+            <ul className="text-muted flex items-center gap-8 whitespace-nowrap text-sm font-medium">
               <li>
                 <a href="#about" className="nav-link">
                   私たちについて
@@ -83,8 +83,11 @@ export default function Header() {
       <nav
         id="mobile-menu"
         aria-label="モバイルナビゲーション"
-        className={`bg-surface absolute inset-x-7 top-20 rounded-b-2xl px-4 py-4 shadow-xl md:hidden ${
-          isMenuOpen ? "block" : "hidden"
+        aria-hidden={!isMenuOpen}
+        className={`bg-surface absolute inset-x-7 top-20 rounded-b-2xl px-4 py-4 shadow-xl transition-opacity duration-300 ease-out md:hidden ${
+          isMenuOpen
+            ? "pointer-events-auto opacity-100"
+            : "pointer-events-none opacity-0"
         }`}
       >
         <ul className="text-muted flex flex-col gap-4 text-base font-medium">
