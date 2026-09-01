@@ -1,5 +1,7 @@
 "use client";
 
+import { useSyncExternalStore } from "react";
+
 import { useTheme } from "@/components/ThemeProvider";
 
 const themes = [
@@ -66,13 +68,21 @@ const themes = [
   },
 ] as const;
 
+const subscribe = () => () => {};
+
 export default function ThemeSwitcher() {
   const { theme, setTheme } = useTheme();
+
+  const mounted = useSyncExternalStore(
+    subscribe,
+    () => true,
+    () => false,
+  );
 
   return (
     <div className="border-border bg-surface flex shrink-0 gap-1 rounded-full border p-1">
       {themes.map((item) => {
-        const isActive = theme === item.value;
+        const isActive = mounted && theme === item.value;
 
         return (
           <button
@@ -86,6 +96,7 @@ export default function ThemeSwitcher() {
             aria-label={item.label}
             aria-pressed={isActive}
             title={item.label}
+            disabled={!mounted}
             onClick={() => setTheme(item.value)}
           >
             <span className="size-4">{item.icon}</span>
