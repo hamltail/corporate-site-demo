@@ -1,0 +1,121 @@
+{
+  "Metadata": {
+    "description": "Creating better experiences and a better future through design and technology."
+  },
+  "Header": {
+    "globalNavigation": "Global navigation",
+    "toggleMenu": "Toggle menu",
+    "mobileNavigation": "Mobile navigation",
+    "about": "About",
+    "news": "News",
+    "contact": "Contact",
+    "recruit": "Careers"
+  },
+  "Hero": {
+    "leadFirst": "Through design and technology,",
+    "leadSecond": "we create better experiences and a better future."
+  },
+  "About": {
+    "label": "About Us",
+    "leadFirst": "Through design and technology,",
+    "leadSecond": "we create better experiences and a better future.",
+    "description": "Animal Corporation is a design studio that creates experiences that guide people's behavior and society toward a better future through the power of design and technology. We empathize with users and create meaningful value that contributes to business growth.",
+    "humanCentered": "We put people first and design experiences around empathy.",
+    "impactful": "We create lasting impact for businesses and society.",
+    "technologyDriven": "We use the latest technologies to deliver the right solutions.",
+    "simpleBeautiful": "We pursue experiences that are simple, beautiful, and easy to use."
+  },
+  "Service": {
+    "label": "Services",
+    "introFirst": "From design and front-end development to information architecture.",
+    "introSecond": "We create websites with a strong focus on user experience.",
+    "webDesign": "We provide effective web design aligned with your brand and goals.",
+    "uiUxDesign": "We design meaningful experiences through a user-centered approach.",
+    "frontEndDevelopment": "We build front ends with a focus on performance and maintainability.",
+    "informationArchitecture": "We organize information and create structures that are easy to navigate."
+  },
+  "Projects": {
+    "label": "Projects",
+    "introFirst": "Explore websites and applications",
+    "introSecond": "created with our design and technology expertise.",
+    "pawthOpen": "Open the Pawth project",
+    "pawthDescription": "Trace your daily journey. A small journaling app.",
+    "pawthWork": "Planning / Design / Development",
+    "animalDescription": "Corporate website development (fictional project)",
+    "animalWork": "Information Architecture / Design / Front-end",
+    "comingSoon": "Coming Soon",
+    "caffeeDescription": "Animal Caffee website redesign (fictional project)",
+    "caffeeWork": "UI/UX Design / Coding / Photography & Asset Selection"
+  },
+  "Team": {
+    "label": "Team",
+    "intro": "Meet the animal members, each bringing their own area of expertise.",
+    "goro": {
+      "name": "Goro Kuromori",
+      "role": "President & CEO",
+      "message": "I believe strength should be used for the sake of our companions."
+    },
+    "ko": {
+      "name": "Ko Minami",
+      "role": "Executive Vice President & COO",
+      "message": "I support the momentum that helps our teammates leap higher."
+    },
+    "miu": {
+      "name": "Miu Shirayuki",
+      "role": "Director & CDO",
+      "message": "Beauty comes from consideration. I want to create experiences that stay with people."
+    },
+    "ken": {
+      "name": "Ken Shibata",
+      "role": "Design Technologist",
+      "message": "I use technology to deliver experiences that move people's hearts."
+    }
+  },
+  "News": {
+    "label": "News",
+    "caffee": {
+      "title": "Animal Caffee is now open.",
+      "description": "We launched Animal Caffee as a new community space where animals can gather."
+    },
+    "member": {
+      "title": "A new member has joined our team.",
+      "description": "Ken Shibata has joined us as a Design Technologist."
+    },
+    "company": {
+      "title": "Animal Corporation has been established.",
+      "description": "We established Animal Corporation to create better experiences through design and technology."
+    }
+  },
+  "Contact": {
+    "label": "Contact",
+    "title": "Shall we create a new experience together?",
+    "description": "Feel free to contact us about service development, web production, design, or anything else.",
+    "mailLabel": "Contact us by email",
+    "button": "Contact Us"
+  },
+  "Recruit": {
+    "label": "Careers",
+    "title": "Individuality is talent.",
+    "gorilla": "Strong gorillas,",
+    "kangaroo": "high-jumping kangaroos,",
+    "cat": "sensitive cats,",
+    "dog": "and honest dogs.",
+    "description": "Animal Corporation is looking for new teammates.",
+    "mailLabel": "Send a recruitment application email",
+    "button": "Apply"
+  },
+  "Footer": {
+    "navigation": "Footer navigation",
+    "about": "About",
+    "news": "News",
+    "contact": "Contact"
+  },
+  "ThemeSwitcher": {
+    "light": "Light theme",
+    "dark": "Dark theme",
+    "system": "System theme"
+  },
+  "BackToTop": {
+    "label": "Back to top"
+  }
+}
