@@ -32,8 +32,8 @@ export default function News() {
               </p>
 
               <p className="mt-3 text-[16px] leading-[1.8] text-[#666666]">
-                動物たちが集う新しいコミュニティスペースとして、Animal
-                Caffee を公開しました。
+                動物たちが集う新しいコミュニティスペースとして、Animal Caffee
+                を公開しました。
               </p>
             </div>
           </article>

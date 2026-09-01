@@ -36,9 +36,7 @@ export default function Service() {
             </div>
 
             <div className="mt-6 w-full">
-              <h3 className="font-english text-[18px] font-bold">
-                Web Design
-              </h3>
+              <h3 className="font-english text-[18px] font-bold">Web Design</h3>
 
               <p className="mt-2 text-[14px] leading-[1.8] text-[#666666]">
                 ブランドと目的に沿った、成果に繋がるWebデザインを提供します。

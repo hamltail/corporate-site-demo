@@ -20,7 +20,7 @@ export default function FadeIn({ children }: FadeInProps) {
       },
       {
         threshold: 0.15,
-      }
+      },
     );
 
     if (ref.current) {
@@ -31,10 +31,7 @@ export default function FadeIn({ children }: FadeInProps) {
   }, []);
 
   return (
-    <div
-      ref={ref}
-      className={`fade-in ${isVisible ? "is-visible" : ""}`}
-    >
+    <div ref={ref} className={`fade-in ${isVisible ? "is-visible" : ""}`}>
       {children}
     </div>
   );

@@ -18,8 +18,7 @@ const notoSansJP = Noto_Sans_JP({
 
 export const metadata: Metadata = {
   title: "Animal Corporation",
-  description:
-    "デザインとテクノロジーで、より良い体験と未来を作る。",
+  description: "デザインとテクノロジーで、より良い体験と未来を作る。",
   icons: {
     icon: "/favicon.png",
   },

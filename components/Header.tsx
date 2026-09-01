@@ -28,10 +28,7 @@ export default function Header() {
           </span>
         </Link>
 
-        <nav
-          aria-label="グローバルナビゲーション"
-          className="hidden md:block"
-        >
+        <nav aria-label="グローバルナビゲーション" className="hidden md:block">
           <ul className="flex items-center gap-8 text-sm font-medium text-[#666666]">
             <li>
               <a href="#about" className="nav-link">

@@ -41,9 +41,7 @@ export default function Footer() {
           </ul>
         </nav>
 
-        <p className="text-xs text-[#666666]">
-          © 2026 Animal Corporation
-        </p>
+        <p className="text-xs text-[#666666]">© 2026 Animal Corporation</p>
       </div>
     </footer>
   );

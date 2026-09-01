@@ -60,9 +60,7 @@ export default function Team() {
                 取締役副社長 / COO
               </p>
 
-              <h3 className="mt-2 font-english text-[16px] font-bold">
-                南 考
-              </h3>
+              <h3 className="mt-2 font-english text-[16px] font-bold">南 考</h3>
 
               <p className="mt-2 text-[14px] leading-[1.8] text-[#666666]">
                 仲間が高く跳べるように。私はその助走を支えます。
