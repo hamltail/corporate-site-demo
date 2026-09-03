@@ -50,7 +50,7 @@ export default async function RootLayout({
       suppressHydrationWarning
       className={`${barlowCondensed.variable} ${notoSansJP.variable}`}
     >
-      <body className="bg-background text-foreground flex min-h-screen flex-col transition-colors duration-300">
+      <body className="bg-background text-foreground flex min-h-screen flex-col">
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider>
             <Header />
