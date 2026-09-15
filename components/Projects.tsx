@@ -2,6 +2,7 @@ import { useTranslations } from "next-intl";
 
 import Container from "@/components/Container";
 import ProjectCard from "@/components/ProjectCard";
+import ProjectCarousel from "@/components/ProjectCarousel";
 
 export default function Projects() {
   const t = useTranslations("Projects");
@@ -28,7 +29,7 @@ export default function Projects() {
           {t("introSecond")}
         </p>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <ProjectCarousel>
           <ProjectCard
             title="Pawth"
             imageSrc="/images/projects-pawth.png"
@@ -100,7 +101,7 @@ export default function Projects() {
               </span>
             }
           />
-        </div>
+        </ProjectCarousel>
       </Container>
     </section>
   );
