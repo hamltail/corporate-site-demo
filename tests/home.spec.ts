@@ -8,14 +8,14 @@ test("Animal Corporationの主要コンテンツが正しく表示される", as
   // Hero
   const hero = page.locator("main").first();
   const heroHeading = page.getByRole("heading", { level: 1 });
+  const heroLead = hero.getByText("デザインとテクノロジーで、").first();
 
   await expect(heroHeading).toBeVisible();
   await expect(heroHeading).toContainText("Design");
   await expect(heroHeading).toContainText("Technology");
 
-  await expect(
-    hero.getByText("デザインとテクノロジーで、").first(),
-  ).toBeVisible();
+  await expect(heroLead).toHaveCSS("opacity", "1");
+  await expect(heroLead).toBeVisible();
 
   await expect(
     hero.getByText("より良い体験と未来を作る。").first(),
