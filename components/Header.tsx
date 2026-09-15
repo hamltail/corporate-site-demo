@@ -23,7 +23,7 @@ export default function Header() {
           <Image
             src="/images/animal-corporation-logo.png"
             alt="Animal Corporation Logo"
-            className="size-8 object-contain"
+            className="company-logo size-8 object-contain"
             width={32}
             height={32}
           />
