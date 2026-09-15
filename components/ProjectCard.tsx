@@ -21,7 +21,7 @@ export default function ProjectCard({
   action,
 }: ProjectCardProps) {
   return (
-    <article className="project-shadow bg-surface flex min-h-109 flex-col overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-2">
+    <article className="project-shadow bg-surface flex min-h-109 flex-col overflow-hidden rounded-xl">
       <div className="bg-surface relative h-60 w-full">
         <Image
           src={imageSrc}
