@@ -73,9 +73,21 @@ export default function Header() {
             aria-controls="mobile-menu"
             onClick={() => setIsMenuOpen((previous) => !previous)}
           >
-            <span className="bg-foreground h-0.5 w-6" />
-            <span className="bg-foreground h-0.5 w-6" />
-            <span className="bg-foreground h-0.5 w-6" />
+            <span
+              className={`bg-foreground h-0.5 w-6 transition-transform duration-300 ${
+                isMenuOpen ? "translate-y-2 rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`bg-foreground h-0.5 w-6 transition-opacity duration-300 ${
+                isMenuOpen ? "opacity-0" : "opacity-100"
+              }`}
+            />
+            <span
+              className={`bg-foreground h-0.5 w-6 transition-transform duration-300 ${
+                isMenuOpen ? "-translate-y-2 -rotate-45" : ""
+              }`}
+            />
           </button>
 
           <ThemeSwitcher />
