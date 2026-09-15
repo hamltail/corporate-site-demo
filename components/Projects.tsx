@@ -1,7 +1,8 @@
-import Image from "next/image";
 import { useTranslations } from "next-intl";
 
 import Container from "@/components/Container";
+import ProjectCard from "@/components/ProjectCard";
+import ProjectCarousel from "@/components/ProjectCarousel";
 
 export default function Projects() {
   const t = useTranslations("Projects");
@@ -28,148 +29,79 @@ export default function Projects() {
           {t("introSecond")}
         </p>
 
-        <div className="mt-12 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <article className="project-shadow bg-surface flex min-h-109 flex-col overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-2">
-            <div className="bg-surface relative h-60 w-full">
-              <Image
-                src="/images/projects-pawth.png"
-                alt="Pawth project thumbnail"
-                fill
-                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                className="object-contain"
-              />
-            </div>
-
-            <div className="flex flex-1 flex-col p-6">
-              <div className="flex items-start justify-between">
-                <h3 className="font-english text-lg font-bold">Pawth</h3>
-
-                <a
-                  href="https://pawth-lp.hamltail.dev/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-muted hover:text-foreground transition-colors"
-                  aria-label={t("pawthOpen")}
+        <ProjectCarousel>
+          <ProjectCard
+            title="Pawth"
+            imageSrc="/images/projects-pawth.png"
+            imageAlt="Pawth project thumbnail"
+            description={t("pawthDescription")}
+            work={t("pawthWork")}
+            technologies={["Haml", "Tailwind CSS", "Responsive"]}
+            action={
+              <a
+                href="https://pawth-lp.hamltail.dev/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-muted hover:text-foreground transition-colors"
+                aria-label={t("pawthOpen")}
+              >
+                <svg
+                  width="20"
+                  height="20"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true"
                 >
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M14 3h7v7"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M10 14L21 3"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M21 21H3V3"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </a>
-              </div>
+                  <path
+                    d="M14 3h7v7"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M10 14L21 3"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                  <path
+                    d="M21 21H3V3"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </a>
+            }
+          />
 
-              <p className="text-muted mt-3 min-h-13 text-sm leading-[1.8]">
-                {t("pawthDescription")}
-              </p>
+          <ProjectCard
+            title="Animal Corporation"
+            imageSrc="/images/projects-animal-corporation.png"
+            imageAlt="Animal Corporation project thumbnail"
+            description={t("animalDescription")}
+            work={t("animalWork")}
+            technologies={["Figma", "HTML / CSS", "Responsive"]}
+          />
 
-              <div className="text-subtle mt-3 text-[13px]">
-                {t("pawthWork")}
-              </div>
-
-              <div className="mt-3 flex items-center gap-3">
-                <span className="chip">Haml</span>
-                <span className="chip">Tailwind CSS</span>
-                <span className="chip">Responsive</span>
-              </div>
-            </div>
-          </article>
-
-          <article className="project-shadow bg-surface flex min-h-109 flex-col overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-2">
-            <div className="bg-surface relative h-60 w-full">
-              <Image
-                src="/images/projects-animal-corporation.png"
-                alt="Animal Corporation project thumbnail"
-                fill
-                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                className="object-contain"
-              />
-            </div>
-
-            <div className="flex flex-1 flex-col p-6">
-              <h3 className="font-english text-lg font-bold">
-                Animal Corporation
-              </h3>
-
-              <p className="text-muted mt-3 min-h-13 text-sm leading-[1.8]">
-                {t("animalDescription")}
-              </p>
-
-              <div className="text-subtle mt-3 text-[13px]">
-                {t("animalWork")}
-              </div>
-
-              <div className="mt-3 flex items-center gap-3">
-                <span className="chip">Figma</span>
-                <span className="chip">HTML / CSS</span>
-                <span className="chip">Responsive</span>
-              </div>
-            </div>
-          </article>
-
-          <article className="project-shadow bg-surface flex min-h-109 flex-col overflow-hidden rounded-xl transition-transform duration-300 hover:-translate-y-2">
-            <div className="bg-surface relative h-60 w-full">
-              <Image
-                src="/images/projects-animal-caffee.png"
-                alt="Animal Caffee project thumbnail"
-                fill
-                sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
-                className="object-contain"
-              />
-            </div>
-
-            <div className="flex flex-1 flex-col p-6">
-              <div className="flex items-start justify-between">
-                <h3 className="font-english text-lg font-bold">
-                  Animal Caffee
-                </h3>
-
-                <span className="bg-surface-chip text-muted rounded px-3 py-1 text-xs font-medium">
-                  {t("comingSoon")}
-                </span>
-              </div>
-
-              <p className="text-muted mt-3 min-h-13 text-sm leading-[1.8]">
-                {t("caffeeDescription")}
-              </p>
-
-              <div className="text-subtle mt-3 text-[13px]">
-                {t("caffeeWork")}
-              </div>
-
-              <div className="mt-3 flex items-center gap-3">
-                <span className="chip">Figma</span>
-                <span className="chip">HTML / CSS</span>
-                <span className="chip">Responsive</span>
-              </div>
-            </div>
-          </article>
-        </div>
+          <ProjectCard
+            title="Animal Caffee"
+            imageSrc="/images/projects-animal-caffee.png"
+            imageAlt="Animal Caffee project thumbnail"
+            description={t("caffeeDescription")}
+            work={t("caffeeWork")}
+            technologies={["Figma", "HTML / CSS", "Responsive"]}
+            action={
+              <span className="bg-surface-chip text-muted rounded px-3 py-1 text-xs font-medium">
+                {t("comingSoon")}
+              </span>
+            }
+          />
+        </ProjectCarousel>
       </Container>
     </section>
   );
