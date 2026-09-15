@@ -56,6 +56,12 @@ export default function ProjectCarousel({ children }: ProjectCarouselProps) {
     pointerStartX.current = null;
   };
 
+  const handleDragStart = (event: React.DragEvent<HTMLDivElement>) => {
+    if (event.target instanceof HTMLImageElement) {
+      event.preventDefault();
+    }
+  };
+
   return (
     <div className="mt-12">
       <div
@@ -63,6 +69,7 @@ export default function ProjectCarousel({ children }: ProjectCarouselProps) {
         onPointerDown={handlePointerDown}
         onPointerUp={handlePointerUp}
         onPointerCancel={handlePointerCancel}
+        onDragStart={handleDragStart}
       >
         {projects.map((project, index) => {
           const relativeIndex =
