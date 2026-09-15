@@ -11,7 +11,7 @@ export default function Hero() {
         <div className="max-w-full md:max-w-160">
           <h1
             id="hero-title"
-            className="font-english text-foreground text-[80px] leading-[1.1] font-normal tracking-widest md:text-[100px] lg:text-[120px]"
+            className="hero-title font-english text-foreground text-[80px] leading-[1.1] font-normal tracking-widest md:text-[100px] lg:text-[120px]"
           >
             <span className="inline-flex items-center gap-6 md:gap-8 lg:gap-10">
               <span className="hero-design opacity-0">Design</span>
