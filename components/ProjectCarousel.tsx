@@ -63,7 +63,7 @@ export default function ProjectCarousel({ children }: ProjectCarouselProps) {
   };
 
   return (
-    <div className="mt-12">
+    <div className="mt-12 overflow-x-clip">
       <div
         className="relative mx-auto h-120 w-full max-w-6xl touch-pan-y perspective-distant select-none"
         onPointerDown={handlePointerDown}
