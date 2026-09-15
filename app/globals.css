@@ -136,3 +136,70 @@
     }
   }
 }
+
+@keyframes hero-design {
+  from {
+    opacity: 0;
+    transform: translateX(-80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hero-technology {
+  from {
+    opacity: 0;
+    transform: translateX(80px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes hero-cross {
+  0% {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.5);
+  }
+
+  70% {
+    opacity: 1;
+    transform: rotate(10deg) scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+@keyframes hero-lead {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.hero-design {
+  animation: hero-design 1.2s ease-out forwards;
+}
+
+.hero-technology {
+  animation: hero-technology 1.2s ease-out 0.6s forwards;
+}
+
+.hero-cross {
+  animation: hero-cross 0.8s ease-out 1.6s forwards;
+}
+
+.hero-lead {
+  animation: hero-lead 1s ease-out 2.2s forwards;
+}
