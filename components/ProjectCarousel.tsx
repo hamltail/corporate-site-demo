@@ -1,14 +1,17 @@
 "use client";
 
-import { Children, type ReactNode, useState } from "react";
+import { Children, type ReactNode, useRef, useState } from "react";
 
 type ProjectCarouselProps = {
   children: ReactNode;
 };
 
+const SWIPE_THRESHOLD = 50;
+
 export default function ProjectCarousel({ children }: ProjectCarouselProps) {
   const projects = Children.toArray(children);
   const [activeIndex, setActiveIndex] = useState(0);
+  const pointerStartX = useRef<number | null>(null);
 
   const showPrevious = () => {
     setActiveIndex(
@@ -20,9 +23,47 @@ export default function ProjectCarousel({ children }: ProjectCarouselProps) {
     setActiveIndex((currentIndex) => (currentIndex + 1) % projects.length);
   };
 
+  const handlePointerDown = (event: React.PointerEvent<HTMLDivElement>) => {
+    const target = event.target as HTMLElement;
+
+    if (target.closest("button, a")) {
+      return;
+    }
+
+    pointerStartX.current = event.clientX;
+    event.currentTarget.setPointerCapture(event.pointerId);
+  };
+
+  const handlePointerUp = (event: React.PointerEvent<HTMLDivElement>) => {
+    if (pointerStartX.current === null) {
+      return;
+    }
+
+    const swipeDistance = event.clientX - pointerStartX.current;
+
+    if (swipeDistance > SWIPE_THRESHOLD) {
+      showPrevious();
+    }
+
+    if (swipeDistance < -SWIPE_THRESHOLD) {
+      showNext();
+    }
+
+    pointerStartX.current = null;
+  };
+
+  const handlePointerCancel = () => {
+    pointerStartX.current = null;
+  };
+
   return (
     <div className="mt-12">
-      <div className="relative mx-auto h-120 w-full max-w-6xl perspective-distant">
+      <div
+        className="relative mx-auto h-120 w-full max-w-6xl touch-pan-y perspective-distant select-none"
+        onPointerDown={handlePointerDown}
+        onPointerUp={handlePointerUp}
+        onPointerCancel={handlePointerCancel}
+      >
         {projects.map((project, index) => {
           const relativeIndex =
             (index - activeIndex + projects.length) % projects.length;
